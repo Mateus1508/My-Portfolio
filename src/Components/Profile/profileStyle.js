@@ -79,25 +79,31 @@ export const Languages = styled.div`
       }
       @media (max-width: 1033px) {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 100vw;
         grid-template-areas: "title"
                             "content";
         gap: 1rem;
-        margin: 10px;
+        margin: 0;
         border: 10px;
-        min-width: 100px;
+        height: 200vh;
+        justify-items: center;
+        h2{
+          width: 90%;
+        }
+    
         div{
-          height: 1fr;
+          width: 90%;
+          align-items: center;
           overflow-x: auto !important;
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+          grid-template-columns: 1fr;
           grid-template-areas: "1 1"
                               "2 2";
-          grid-template-rows: 130px 1fr;
+          grid-template-rows: 1fr;
           background-color: #1E90FF;
           border: 10px;
           border-radius: 10px;
-          align-items: flex-start;
+          justify-items: center;
           
       }
     }
