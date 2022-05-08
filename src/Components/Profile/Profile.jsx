@@ -5,6 +5,7 @@ import { Languages } from './profileStyle';
 const Profile = () => {
   return (  
     <Languages>
+      <h1>Habilidades</h1>
       <div className="frontend">
         <h2>Desenvolvimento Frontend</h2>
         <div>

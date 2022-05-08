@@ -2,21 +2,23 @@ import styled from "styled-components";
 
 export const ContactContainer = styled.div`
   display: grid;
-  grid-template-columns: "1fr";
-  grid-template-rows: "1fr";
-  grid-template-areas: "content";
+  grid-template-columns: "1fr 1fr 1fr";
+  grid-template-rows: "1fr 1fr";
+  grid-template-areas: "... content ..."
+                       "footer footer footer";
   height: 100vh;
   justify-items: center;
   form{
+    grid-area: content;
     background-color: #1E90FF;
     align-items: center;
     display: grid;
     justify-items: center;
     border-radius: 1rem;
     padding: 20px;
-    width: 70%;
+    max-width: 700px;
     height: 75vh;
-    margin-bottom: 5vh;
+    margin: 5vh 0 5vh 0;
     color: #fff;
     h2 {
       background-color: #1E90FF;
@@ -61,7 +63,7 @@ export const ContactContainer = styled.div`
             button{
               font-size: 20px;
               background-color: aliceblue;
-              width: 10vw;
+              width: 100px;
               height: 5vh;
               border-radius: 5px;
               margin: 10px 10px 10px 0;
@@ -98,8 +100,9 @@ export const ContactContainer = styled.div`
       }
       
           footer{
+            grid-area: footer;
             width: 100%;
-            height: 20vh;
+            height: 15vh;
             background-color: #1A09FF;
             display: flex;
             flex-direction: column;

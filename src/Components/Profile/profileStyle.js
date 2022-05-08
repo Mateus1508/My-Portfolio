@@ -2,79 +2,103 @@ import styled from "styled-components";
 
 export const Languages = styled.div`
   display: grid;
-  grid-template-columns: "1fr 1fr 1fr";
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "title title title"
                        "content content content";
   gap: 1rem;
   height: 100vh;
   margin: 10px;
   border: 10px;
+  min-width: 1000px;
+  h1{
+    grid-area: title;
+    text-align: center;
+    align-self: center;
+  }
+  div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+    grid-template-areas: "1 1"
+    "2 2";
+    grid-template-rows: 130px 1fr;
+    background-color: #1E90FF;
+    border: 10px;
+    border-radius: 10px;
+    align-items: flex-start; 
     h2{
+      grid-area: 1;
+      text-align: center;
+      align-self: center;
       margin: 10px;
       color: #fff;
       background-color: transparent;
-      }
+      height: 50%;
+      border-bottom: 1px solid #fff;
+      white-space: nowrap;
+    }
     div{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #1E90FF;
-      border: 10px;
-      border-radius: 10px;
-        div{
-          display: grid;
-          grid-template-areas: "1 1"
-                               "2 2";
-          grid-template-columns: "1fr 1fr";
-          gap: 1rem;
+      display: grid;
+      grid-area: 2;
+      grid-template-columns: repeat(auto-fit, minmax( 100px, 1fr));
+      gap: 1rem;
+      margin: 10px;
           article{
             display: grid;
-            grid-template-columns: "1fr 1fr";
-            grid-template-areas: "h4 h4"
-                                 "img small";
-            padding: 20px;
+            grid-template-columns: 1fr;
+            grid-template-areas: "h4"
+                                 "img"
+                                 "small";
+            padding: 10px 20px;
             border-radius: 5px;
+            margin-top: 10px;
                 }
             h4{
-              grid-column: 1/3;
-              grid-row: 1;
+              font-family: 'Bebas Neue', cursive;
+              letter-spacing: 0.1rem;
+              font-weight: normal;
+              grid-area: h4;
               align-self: center;
               justify-self: center;
+              text-align: center;
+              white-space: nowrap;
             }
             img{
-              width: 50px;
+              max-width: 50px;
               margin: 10px;
-              grid-column: 1;
-              grid-row: 2;
+              align-self: center;
+              justify-self: center;
+              grid-area: img;
               }
             small{
               align-self: center;
               justify-self: center;
-              grid-column: 2;
-              grid-row: 1/3;
+              grid-area: small;
+              text-align: center;           
             }
         }
       }
-      @media (max-width: 820px) {
+      @media (max-width: 1033px) {
         display: grid;
-        grid-template-columns: "1fr";
+        grid-template-columns: 1fr;
         grid-template-areas: "title"
-                       "content";
-        gap: 0.5rem;  
+                            "content";
+        gap: 1rem;
+        margin: 10px;
+        border: 10px;
+        min-width: 100px;
         div{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+          height: 1fr;
+          overflow-x: auto !important;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+          grid-template-areas: "1 1"
+                              "2 2";
+          grid-template-rows: 130px 1fr;
           background-color: #1E90FF;
           border: 10px;
           border-radius: 10px;
-          div{
-            display: grid;
-            grid-template-areas: "1 1"
-                                "2 2";
-            grid-template-columns: "1fr 1fr";
-            gap: 1rem;
-            }
-        }             
+          align-items: flex-start;
+          
       }
+    }
 `

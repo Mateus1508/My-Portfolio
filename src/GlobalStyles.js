@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
   background-color: aliceblue;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 *, input, button {
