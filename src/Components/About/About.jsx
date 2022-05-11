@@ -3,7 +3,7 @@ import {Container} from './aboutStyle';
 
 const About = () => {
   return (
-    <Container>
+    <Container id="About">
       <h2>Sobre mim</h2>
       
       <p>Sou ...</p>

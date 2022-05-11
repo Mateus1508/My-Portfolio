@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Languages } from './profileStyle'; 
+import { Languages, Skills } from './skillStyle'; 
 
-const Profile = () => {
+const Skill = () => {
   return (  
-    <Languages>
+    <Languages id="Skill">
       <h1>Habilidades</h1>
-      <div className="frontend">
+      <Skills className="frontend">
         <h2>Desenvolvimento Frontend</h2>
         <div>
           <article>
@@ -34,9 +34,24 @@ const Profile = () => {
             <small> Intermediário</small>
             <img src="./images/bootstrap.png" alt="Bootstrap" />
           </article>
+          <article>
+            <h4>Styled Components</h4>
+            <small> Básico</small>
+            <img src="./images/styled-components.png" alt="Styled Components"/>
+          </article>
+            <article>
+              <h4>Sass</h4>
+              <small>Básico</small>
+              <img src="./images/sass.png" alt="Sass" /> 
+            </article>
+            <article>
+              <h4>Vue</h4>
+              <small>Básico</small>
+              <img src="./images/vue.png" alt="Vuejs" /> 
+            </article>
           </div>
-        </div>
-        <div className="backend">
+        </Skills>
+        <Skills className="backend">
           <h2>Desenvolvimento Backend</h2>
           <div>
             <article>
@@ -54,30 +69,15 @@ const Profile = () => {
               <small>Básico</small>
               <img src="./images/node-js.png" alt="NodeJS" />
             </article>
-            <article>
-              <h4>Angular</h4>
-              <small>Loading...</small>
-              <img src="./images/angular.png" alt="Angular" /> 
-            </article>
           </div>
-        </div>    
-          <div className="Outros">
+        </Skills>    
+          <Skills className="Outros">
             <h2>Outros</h2>
             <div>
-            <article>
-              <h4>Flutter</h4>
-              <small>Loading...</small>
-              <img src="./images/flutter.png" alt="Flutter" /> 
-            </article>
             <article>
               <h4>Azure DevOps</h4>
               <small>Básico</small>
               <img src="./images/azure.png" alt="Azure DevOps" />
-            </article>
-            <article>
-              <h4>React Native</h4>
-              <small>Loading...</small>
-              <img src="./images/physics.png" alt="React Native" /> 
             </article>
             <article>
               <h4>Git</h4>
@@ -89,12 +89,17 @@ const Profile = () => {
               <small>Intermediário</small>
               <img src="./images/github.png" alt="Github" />
             </article>
+            <article>
+              <h4>Photoshop</h4>
+              <small>Intermediário</small>
+              <img src="./images/Photoshop.png" alt="Photoshop" />
+            </article>
             </div>
-          </div>
+          </Skills>
     </Languages>
   );
 }
  
-export default Profile;
+export default Skill;
 
 

@@ -7,21 +7,22 @@ import dark from './Themes/dark';
 
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
-import Profile from './Components/Profile/Profile';
+import Skill from './Components/Skill/Skill';
 import Contact from './Components/Contact/Contact';
 import Projects from './Components/Projects/Projects';
+import Navigation from './Components/Nav/Nav';
 
 
 function App() { 
   return (
     <ThemeProvider theme={light}>
-     <GlobalStyles/>
-
-     <Home/>
-     <About/>
-     <Profile/>
-     <Projects/>
-     <Contact/>
+      <GlobalStyles/>
+        <Navigation/>
+        <Home/>
+        <About/>
+        <Skill/>
+        <Projects/>
+        <Contact/>
     </ThemeProvider>
   )
 }

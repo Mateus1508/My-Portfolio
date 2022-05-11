@@ -4,7 +4,7 @@ import { ContactContainer } from './contactStyle';
 
 const Contact = () => {
   return (
-    <ContactContainer>
+    <ContactContainer id="Contact">
 
       <form action="">
           <h2 >Envie o seu feedback!</h2>

@@ -3,9 +3,9 @@ import './projectStyle';
 
 const Projects = () => {
   return (
-    <div>
+    <Projects id="Projects">
       
-    </div>
+    </Projects>
   );
 };
 

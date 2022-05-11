@@ -4,7 +4,7 @@ import { HomePage } from './HomeStyle';
 
 const Home = () => {
   return (
-    <HomePage>
+    <HomePage id="Home">
     
       <h3>Olá, sou</h3>
       <h1>Mateus Belmonte</h1>

@@ -15,7 +15,20 @@ export const Languages = styled.div`
     text-align: center;
     align-self: center;
   }
-  div{
+  
+@media (max-width: 1033px) {
+      display: grid;
+      grid-template-columns: 100vw;
+      grid-template-areas: "title"
+                          "content";       
+      gap: 1rem;
+      margin: 0;
+      border: 10px;
+      height: 250vh;
+      justify-items: center;
+    }
+`
+export const Skills = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
     grid-template-areas: "1 1"
@@ -32,7 +45,7 @@ export const Languages = styled.div`
       margin: 10px;
       color: #fff;
       background-color: transparent;
-      height: 50%;
+      height: 49%;
       border-bottom: 1px solid #fff;
       white-space: nowrap;
     }
@@ -41,7 +54,8 @@ export const Languages = styled.div`
       grid-area: 2;
       grid-template-columns: repeat(auto-fit, minmax( 100px, 1fr));
       gap: 1rem;
-      margin: 10px;
+      margin: 20px;
+      background: transparent;
           article{
             display: grid;
             grid-template-columns: 1fr;
@@ -51,16 +65,18 @@ export const Languages = styled.div`
             padding: 10px 20px;
             border-radius: 5px;
             margin-top: 10px;
+            height: 120px;
+            width: 130px;
                 }
             h4{
               font-family: 'Bebas Neue', cursive;
-              letter-spacing: 0.1rem;
+              letter-spacing: 0.09rem;
               font-weight: normal;
               grid-area: h4;
               align-self: center;
               justify-self: center;
               text-align: center;
-              white-space: nowrap;
+             
             }
             img{
               max-width: 50px;
@@ -76,35 +92,26 @@ export const Languages = styled.div`
               text-align: center;           
             }
         }
-      }
+
       @media (max-width: 1033px) {
-        display: grid;
-        grid-template-columns: 100vw;
-        grid-template-areas: "title"
-                            "content";
-        gap: 1rem;
-        margin: 0;
-        border: 10px;
-        height: 200vh;
-        justify-items: center;
         h2{
-          width: 90%;
+          text-align: center;
+          font-size: 22px;
         }
-    
         div{
-          width: 90%;
+          
           align-items: center;
-          overflow-x: auto !important;
           display: grid;
           grid-template-columns: 1fr;
           grid-template-areas: "1 1"
                               "2 2";
           grid-template-rows: 1fr;
           background-color: #1E90FF;
-          border: 10px;
+        
           border-radius: 10px;
           justify-items: center;
           
+          
       }
     }
-`
+      `
