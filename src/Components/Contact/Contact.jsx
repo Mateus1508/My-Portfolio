@@ -1,28 +1,44 @@
-import React from 'react';
+import React, {useRef} from 'react';
+import emailjs from '@emailjs/browser';
 
-import { ContactContainer } from './contactStyle';
+import { ContactContainer, Footer } from './contactStyle';
 
 const Contact = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('gmailMessage', 'template_9zqwjfz', form.current, 'LRCeCYnydtnW0i06M')
+      .then(() => {
+          alert('Sua mensagem foi enviada com sucesso!');
+      }, (error) => {
+          alert(error,message);
+      });
+      e.target.reset();
+    }
+
   return (
     <ContactContainer id="Contact">
 
-      <form action="">
+      <form ref={form} onSubmit={sendEmail}>
           <h2 >Envie o seu feedback!</h2>
           <fieldset>
             <legend>Nome</legend>
-            <input type="text" className="name" maxlength="50"/>
+            <input type="text" name="name" maxlength="30"  required/>
           </fieldset>
           <fieldset>
             <legend>Email</legend>
-            <input type="email" className="email" maxlength="50"/>
+            <input type="email" name="email" maxlength="45"required/>
           </fieldset>
           <fieldset>
             <legend>Mensagem</legend>
-            <textarea className="message" rows="4" maxlength="700" wrap="hard" />
+            <textarea name="message" rows="4" maxlength="700" wrap="hard" required/>
           </fieldset>
-          <button>Enviar</button>
+          <button type="submit">Enviar</button>
       </form>
-      <footer>
+      <Footer>
       <div>
         <a href="https://www.linkedin.com/in/mateus-belmonte-64b6b11a3/" target="_blank">
           <img src="./images/linkedin.png" alt="LinkedIn" />
@@ -35,7 +51,7 @@ const Contact = () => {
         </a>
       </div>
         <h3>Developed by Mateus1508 </h3>
-      </footer>
+      </Footer>
 
 
     </ContactContainer>

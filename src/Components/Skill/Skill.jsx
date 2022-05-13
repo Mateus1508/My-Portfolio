@@ -44,11 +44,6 @@ const Skill = () => {
               <small>Básico</small>
               <img src="./images/sass.png" alt="Sass" /> 
             </article>
-            <article>
-              <h4>Vue</h4>
-              <small>Básico</small>
-              <img src="./images/vue.png" alt="Vuejs" /> 
-            </article>
           </div>
         </Skills>
         <Skills className="backend">

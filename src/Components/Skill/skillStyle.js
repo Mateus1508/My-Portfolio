@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const Languages = styled.div`
   display: grid;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-snap-align: start;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "title title title"
                        "content content content";

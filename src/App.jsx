@@ -9,19 +9,19 @@ import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Skill from './Components/Skill/Skill';
 import Contact from './Components/Contact/Contact';
-import Projects from './Components/Projects/Projects';
-import Navigation from './Components/Nav/Nav';
+import Project from './Components/Project/Project';
+import Nav from './Components/Nav/Nav';
 
 
 function App() { 
   return (
-    <ThemeProvider theme={light}>
+    <ThemeProvider theme={light}>  
       <GlobalStyles/>
-        <Navigation/>
+        <Nav/>
         <Home/>
         <About/>
         <Skill/>
-        <Projects/>
+        <Project/>
         <Contact/>
     </ThemeProvider>
   )
