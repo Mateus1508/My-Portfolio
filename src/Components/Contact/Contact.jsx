@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
 
 import { ContactContainer, Footer } from './contactStyle';
@@ -18,7 +18,28 @@ const Contact = () => {
       });
       e.target.reset();
     }
+    
+    const [validateEmail, setValidateEmail] = useState(false);
+    const [validateMessage, setValidateMessage] = useState();
+    
+    function handleEmail () {
+      setValidateEmail(!email.includes('@'))
+    }
 
+    function EmailContent () {
+      return <span color="red">Email inválido!</span>
+    }
+
+    function handleMessage () {
+      setValidateMessage(!message.length() < 10)
+    }
+
+    function MessageContent () {
+      return <span color="red">A mensagem deve possuir no mínimo 10 caracteres! </span>
+    }
+
+    
+  
   return (
     <ContactContainer id="Contact">
 
@@ -31,12 +52,14 @@ const Contact = () => {
           <fieldset>
             <legend>Email</legend>
             <input type="email" name="email" maxlength="45"required/>
+            {validateEmail && <EmailContent/>}
           </fieldset>
           <fieldset>
             <legend>Mensagem</legend>
-            <textarea name="message" rows="4" maxlength="700" wrap="hard" required/>
+            <textarea name="message" onFocusOut={handleMessage} rows="4" maxlength="700" wrap="hard" required/>
+            {validateMessage && <MessageContent/>}
           </fieldset>
-          <button type="submit">Enviar</button>
+          <button type="submit" onClick={handleEmail}>Enviar</button>
       </form>
       <Footer>
       <div>
