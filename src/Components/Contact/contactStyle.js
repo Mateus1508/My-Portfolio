@@ -9,12 +9,26 @@ export const ContactContainer = styled.div`
   height: 100vh;
   justify-items: center;
   width: 100vw;
+  
   form{
     grid-area: content;
     background-color: #1E90FF;
     width: 70vw;
     align-items: center;
     display: grid;
+    grid-template-areas: 
+    "title title"
+    "name email"
+    "message message"
+    "btn btn";
+    @media (max-width: 800px) {
+    grid-template-areas: 
+    "title title"
+    "name name"
+    "email email"
+    "message message"
+    "btn btn";  
+    }
     justify-items: center;
     border-radius: 1rem;
     padding: 20px;
@@ -23,14 +37,16 @@ export const ContactContainer = styled.div`
     color: #fff;
     h2 {
       background-color: transparent; 
+      justify-items: center;
+      text-align: center;
     }
     fieldset{
-        border: 1px solid #fff;
-        border-radius: 1rem;
-        padding: 0 1rem 1rem 1rem;
-        background-color: transparent;
-        width: 100%;
-        height: 100%;
+      border: 1px solid #fff;
+      border-radius: 1rem;
+      padding: 0 1rem 1rem 1rem;
+      background-color: transparent;
+      height: 100%;
+      margin: 5px;
       legend{
           background-color: #1E90FF;
           color: #fff;
@@ -40,14 +56,21 @@ export const ContactContainer = styled.div`
           padding: 2px;
       } 
       }
+      span{
+        color: #f15;
+        background: transparent;
+        margin: 5px;
+        font-weight: bold;
+      }
         }
         textarea {
-          font-size: 20px;
+          font-size: 16px;
           outline: none;
           background-color: transparent;
           color: #fff;
           width: 100%;
-
+          overflow-y: hidden;
+          
         }  
             input{
               margin-bottom: 1px;
@@ -56,10 +79,29 @@ export const ContactContainer = styled.div`
               border-bottom: 1px solid #fff;
               align-items: center;
               text-align: center;
-              font-size: 20px;
+              font-size: 16px;
               height: 1.5rem;
               outline: none;
               width: 100%;
+            }
+            .name{
+              grid-area: name;
+              width: 95%;
+            }
+            .email{
+              grid-area: email;
+              width: 95%;
+            }
+            .title{
+              grid-area: title;
+              text-align: center;
+            }
+            .message{
+              grid-area: message;
+              width: 97.5%;
+            }
+            .btn{
+              grid-area: btn;
             }
             button{
               font-size: 20px;
@@ -67,7 +109,9 @@ export const ContactContainer = styled.div`
               width: 100px;
               height: 5vh;
               border-radius: 5px;
-              margin: 10px 10px 10px 0;
+              margin: 10px;
+              justify-content: center;
+            
             cursor: pointer;
             color: #1E90FF;
             &:hover{
@@ -119,8 +163,4 @@ export const Footer = styled.footer`
               margin: 2px 0 10px 0;
             }
           
-@media screen and (min-width: 540px) {
-}
-
-
 `
