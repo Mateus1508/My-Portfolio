@@ -79,6 +79,7 @@ const Contact = () => {
             />
             <span>{formErrors.email}</span>
           </fieldset>
+          
           <fieldset className="message">
             <legend>Mensagem</legend>
             <textarea name="message"

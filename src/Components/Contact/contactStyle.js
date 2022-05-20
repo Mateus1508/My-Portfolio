@@ -64,7 +64,7 @@ export const ContactContainer = styled.div`
       }
         }
         textarea {
-          font-size: 16px;
+          font-size: 14px;
           outline: none;
           background-color: transparent;
           color: #fff;
