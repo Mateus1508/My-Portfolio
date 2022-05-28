@@ -2,22 +2,36 @@ import styled from "styled-components";
 
 export const Languages = styled.div`
   display: grid;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  scroll-snap-align: start;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "title title title"
-                       "content content content";
+  grid-template-columns: 1fr;
+  grid-template-areas: "title "
+                       "content ";
   gap: 1rem;
   height: 100vh;
   margin: 10px;
   border: 10px;
-  min-width: 1000px;
+  width: 50vw;
+  float: left;
   h1{
     grid-area: title;
     text-align: center;
     align-self: center;
+    color: #fff;
   }
+  .rec.rec-arrow:disabled {
+    visibility: hidden;
+}
+  .rec.rec-arrow {
+    background-color: #fff;
+}
+  .rec.rec-arrow:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+  .rec-carousel-item:focus {
+    outline: none;
+    box-shadow: inset 0 0 1px 1px lightgrey;
+}
   
 @media (max-width: 1033px) {
       display: grid;
@@ -27,20 +41,23 @@ export const Languages = styled.div`
       gap: 1rem;
       margin: 0;
       border: 10px;
-      height: 250vh;
       justify-items: center;
     }
 `
 export const Skills = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
     grid-template-areas: "1 1"
     "2 2";
     grid-template-rows: 130px 1fr;
-    background-color: #1E90FF;
     border: 10px;
-    border-radius: 10px;
-    align-items: flex-start; 
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     h2{
       grid-area: 1;
       text-align: center;
@@ -55,7 +72,7 @@ export const Skills = styled.div`
     div{
       display: grid;
       grid-area: 2;
-      grid-template-columns: repeat(auto-fit, minmax( 100px, 1fr));
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 1rem;
       margin: 20px;
       background: transparent;
@@ -65,11 +82,12 @@ export const Skills = styled.div`
             grid-template-areas: "h4"
                                  "img"
                                  "small";
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin-top: 10px;
-            height: 120px;
-            width: 130px;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            margin-top: .1rem;
+            height: 9rem;
+            width: 7rem;
+            background: #fFF;
                 }
             h4{
               font-family: 'Bebas Neue', cursive;
@@ -79,20 +97,22 @@ export const Skills = styled.div`
               align-self: center;
               justify-self: center;
               text-align: center;
-             
+              background: transparent;
             }
             img{
-              max-width: 50px;
-              margin: 10px;
+              max-width: 3rem;
+              margin: 1rem;
               align-self: center;
               justify-self: center;
               grid-area: img;
+              background: transparent;
               }
             small{
               align-self: center;
               justify-self: center;
               grid-area: small;
-              text-align: center;           
+              text-align: center; 
+              background: transparent;          
             }
         }
 

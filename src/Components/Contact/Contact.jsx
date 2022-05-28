@@ -1,3 +1,4 @@
+import env from "react-dotenv";
 import React, {useRef, useEffect, useState} from 'react';
 import emailjs from '@emailjs/browser';
 
@@ -10,7 +11,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('gmailMessage', 'template_9zqwjfz', form.current, 'LRCeCYnydtnW0i06M')
+    emailjs.sendForm(env.REACT_APP_GMAIL_MESSAGE, env.REACT_APP_TEMPLATE, form.current, env.REACT_APP_USER_ID)
       .then(() => {
           alert('Sua mensagem foi enviada com sucesso!');
       }, (error) => {

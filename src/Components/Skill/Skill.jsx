@@ -1,12 +1,20 @@
 import React from 'react';
 
 import { Languages, Skills } from './skillStyle'; 
+import Carousel from "react-elastic-carousel";
+
+const breakPoints = [
+  { width: 1500, itemsToShow: 1 },
+  { width: 1200, itemsToShow: 2 },
+  { width: 2200, itemsToShow: 3 },
+];
 
 const Skill = () => {
   return (  
     <Languages id="Skill">
       <h1>Habilidades</h1>
-      <Skills className="frontend">
+      <Carousel breakPoints={breakPoints}>
+      <Skills className="frontend" number="1">
         <h2>Desenvolvimento Frontend</h2>
         <div>
           <article>
@@ -46,7 +54,7 @@ const Skill = () => {
             </article>
           </div>
         </Skills>
-        <Skills className="backend">
+        <Skills className="backend" number="2">
           <h2>Desenvolvimento Backend</h2>
           <div>
             <article>
@@ -66,7 +74,7 @@ const Skill = () => {
             </article>
           </div>
         </Skills>    
-          <Skills className="Outros">
+          <Skills className="Outros" number="3">
             <h2>Outros</h2>
             <div>
             <article>
@@ -91,10 +99,13 @@ const Skill = () => {
             </article>
             </div>
           </Skills>
+          </Carousel>
     </Languages>
   );
 }
- 
 export default Skill;
+
+
+
 
 
