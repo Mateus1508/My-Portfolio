@@ -4,7 +4,7 @@ export const GlobalStyles = createGlobalStyle`
 
 *{
   overflow-y: smooth;
-  background-color: #219;
+  background-color: #777;
   margin: 0;
   padding: 0;
   border: 0;

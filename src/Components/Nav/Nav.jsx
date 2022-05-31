@@ -59,20 +59,6 @@ const Nav = () => {
 
       <Link
        activeClass="active"
-       className="projects"
-       to="Projects"
-       spy={true}
-       smooth={true}
-       duration={600}
-      >
-      <a href="#Projects" 
-        onClick={() => setActiveNav('#projects')} className={activeNav === '#projects' ? 'active' : ''}>
-        <MdOutlineContactPage className="icon" />
-      </a>
-      </Link>
-
-      <Link
-       activeClass="active"
        className="contact"
        to="Contact"
        spy={true}
