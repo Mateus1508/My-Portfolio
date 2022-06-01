@@ -34,9 +34,9 @@ export const Languages = styled.div`
 }
   .rec.rec-arrow {
     background-color: #fff;
-    @media (max-width: 1033px) {
+   
     visibility: hidden;
-    }
+    
 }
   .rec.rec-arrow:hover {
     background-color: #fff;
@@ -54,7 +54,7 @@ export const Skills = styled.div`
     grid-area: content;
     grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
     grid-template-areas: "1 1"
-    "2 2";
+                         "2 2";
     grid-template-rows: 130px 1fr;
     border: 1rem;
     align-items: flex-start;
@@ -68,7 +68,11 @@ export const Skills = styled.div`
       width: 60%;
     }
     @media (max-width: 768px) {
-      width: 100%;
+     width: 100vw;
+     grid-template-columns: repeat(auto-fit, 1fr);
+     grid-template-areas: "1 1"
+                         "2 2";
+    grid-template-rows: 190px 1fr;
     }
     h2{
       grid-area: 1;
@@ -87,7 +91,7 @@ export const Skills = styled.div`
       }
       @media (max-width: 769px) {
           text-align: center;
-          font-size: 20px;
+          font-size: 23px;
           font-weight: bold;
           white-space: normal;
       }
@@ -100,12 +104,12 @@ export const Skills = styled.div`
       margin: 20px;
       background: transparent;
 
-      @media (max-width: 1033px) {
+/*       @media (max-width: 1033px) {
           grid-template-columns: 1fr 1fr 1fr;
           grid-template-areas: "1 1 1"
                               "2 2 2";
         justify-items: center;        
-      }      
+      }       */
 
       @media (max-width: 700px) {
           grid-template-columns: 1fr 1fr;
@@ -127,12 +131,13 @@ export const Skills = styled.div`
             height: 9rem;
             width: 7rem;
             background: #fFF;
+          
+          @media (max-width: 700px) {  
+            height: 6rem;
+            width: 5rem;
+            padding: 1rem 0 1rem 0;
           }
-          @media (max-width: 700px) {
-
-
-            
-          }
+        }
           h4{
             font-family: 'Bebas Neue', cursive;
               letter-spacing: 0.09rem;
@@ -142,6 +147,9 @@ export const Skills = styled.div`
               justify-self: center;
               text-align: center;
               background: transparent;
+              @media (max-width: 700px) {  
+               font-size: 0.8rem;
+              }
             }
             img{
               max-width: 3rem;
@@ -150,14 +158,21 @@ export const Skills = styled.div`
               justify-self: center;
               grid-area: img;
               background: transparent;
+              @media (max-width: 700px) {    
+                width: 2rem;
+                margin: 1.5rem 0 1.5rem 0;
+              }
               }
             small{
               align-self: center;
               justify-self: center;
               grid-area: small;
               text-align: center; 
-              background: transparent;          
+              background: transparent;   
+              @media (max-width: 700px) {  
+                font-size: 0.7rem;
+              }       
             }
-        }
+        
 
       `

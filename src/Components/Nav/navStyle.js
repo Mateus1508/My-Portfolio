@@ -14,6 +14,12 @@ gap: 0.8rem;
 background-color: rgba(0,0,0,0.3);
 backdrop-filter: blur(15px);
 border-radius: 3rem;
+opacity: 0.1;
+transition: 4s;
+&:hover{
+  transition: 1s;
+  opacity: 1;
+}
 a{
    background: none;
    display: flex;

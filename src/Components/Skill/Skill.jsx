@@ -13,7 +13,12 @@ const Skill = () => {
   return (  
     <Languages id="Skill">
       <h1>Habilidades</h1>
-      <Carousel breakPoints={breakPoints}>
+      <Carousel 
+      breakPoints={breakPoints}
+      easing="cubic-bezier(1,.15,.55,1.54)"
+      tiltEasing="cubic-bezier(0.110, 1, 1.000, 0.210)"
+      transitionMs={700}
+    >
       <Skills className="frontend" number="1">
         <h2>Desenvolvimento Frontend</h2>
         <div>
