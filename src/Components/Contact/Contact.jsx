@@ -11,7 +11,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(env.REACT_APP_GMAIL_MESSAGE, env.REACT_APP_TEMPLATE, form.current, env.REACT_APP_USER_ID)
+    emailjs.sendForm(process.env.REACT_APP_GMAIL_MESSAGE, process.env.REACT_APP_TEMPLATE, form.current, process.env.REACT_APP_USER_ID)
       .then(() => {
           alert('Sua mensagem foi enviada com sucesso!');
       }, (error) => {
@@ -63,15 +63,15 @@ const Contact = () => {
 
       <form ref={form} onSubmit={sendEmail}>
           <h2 className="title" >Envie o seu feedback!</h2>
-          <fieldset className="name">
-            <legend>Nome</legend>
+
+            <label for="name">Nome</label>
             <input type="text" 
             name="name" 
             maxlength="30"
             />
-          </fieldset>
-          <fieldset  className="email">
-            <legend>Email</legend>
+          
+          
+            <label for="email">Email</label>
             <input type="email" 
             name="email" 
             maxlength="45"
@@ -79,10 +79,10 @@ const Contact = () => {
             value={formValues.email}
             />
             <span>{formErrors.email}</span>
-          </fieldset>
+         
           
-          <fieldset className="message">
-            <legend>Mensagem</legend>
+          
+            <label for="message">Mensagem</label>
             <textarea name="message"
             onChange={handleChanges}
             rows="3"
@@ -91,7 +91,7 @@ const Contact = () => {
             value={formValues.message}
             />
             <span>{formErrors.message}</span>
-          </fieldset>
+         
           <button className="btn"type="submit" onClick={handleSubmit}>Enviar</button>
       </form>
       <Footer>

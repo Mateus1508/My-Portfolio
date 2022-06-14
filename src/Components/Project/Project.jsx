@@ -10,7 +10,7 @@ const breakPoints = [
 
 const Project = () => {
   return (
-    <Projects>
+    <Projects id="Project">
       <h1>Projetos</h1>
       <Carousel 
       breakPoints={breakPoints} 

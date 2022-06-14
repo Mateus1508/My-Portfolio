@@ -59,6 +59,21 @@ const Nav = () => {
 
       <Link
        activeClass="active"
+       className="project"
+       to="Project"
+       spy={true}
+       smooth={true}
+       duration={600}
+      >
+      <a href="#Project" 
+        onClick={() => setActiveNav('#project')} className={activeNav === '#project' ? 'active' : ''}>
+        <BsFileEarmarkCode className="icon" />
+        
+      </a>
+      </Link>
+
+      <Link
+       activeClass="active"
        className="contact"
        to="Contact"
        spy={true}
@@ -67,7 +82,7 @@ const Nav = () => {
       >
       <a href="#Contact" 
         onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}>
-        <BsFileEarmarkCode className="icon" />
+        <MdOutlineContactPage className="icon" />
       </a>
       </Link>
       

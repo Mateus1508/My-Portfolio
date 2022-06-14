@@ -12,7 +12,12 @@ export const ContactContainer = styled.div`
   
   form{
     grid-area: content;
-    background-color: #1E90FF;
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     width: 70vw;
     align-items: center;
     display: grid;
@@ -30,7 +35,6 @@ export const ContactContainer = styled.div`
     "btn btn";  
     }
     justify-items: center;
-    border-radius: 1rem;
     padding: 20px;
     height: 70vh;
     margin: 2vh 0 3vh 0;
@@ -48,7 +52,7 @@ export const ContactContainer = styled.div`
       height: 100%;
       margin: 5px;
       legend{
-          background-color: #1E90FF;
+          background-color: transparent;
           color: #fff;
           margin-bottom: 1.5rem;
           font-size: 25px;
@@ -66,7 +70,7 @@ export const ContactContainer = styled.div`
         textarea {
           font-size: 14px;
           outline: none;
-          background-color: transparent;
+          background-color: rgba(255, 255, 255, 0.2);
           color: #fff;
           width: 100%;
           overflow-y: hidden;
@@ -74,7 +78,7 @@ export const ContactContainer = styled.div`
         }  
             input{
               margin-bottom: 1px;
-              background-color: transparent;
+              background-color: rgba(255, 255, 255, 0.2);
               color: #fff;
               border-bottom: 1px solid #fff;
               align-items: center;
