@@ -32,24 +32,25 @@ export const Languages = styled.div`
   .rec.rec-arrow:disabled {
     visibility: hidden;
 }
-  .rec.rec-arrow {
-    background-color: #fff;
-   
-    visibility: hidden;
-    
+.rec.rec-arrow {
+  background-color: #fff;
+  
+  visibility: hidden;
+  
 }
-  .rec.rec-arrow:hover {
-    background-color: #fff;
-    color: #000;
+.rec.rec-arrow:hover {
+  background-color: #fff;
+  color: #000;
 }
 
-  .rec-carousel-item:focus {
-    outline: none;
-    box-shadow: inset 0 0 1px 1px lightgrey;
+.rec-carousel-item:focus {
+  outline: none;
+  box-shadow: inset 0 0 1px 1px lightgrey;
 }
-  
+
 `
 export const Skills = styled.div`
+    transform-style: preserve-3d;
     display: grid;
     grid-area: content;
     grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
@@ -131,6 +132,8 @@ export const Skills = styled.div`
             height: 9rem;
             width: 7rem;
             background: #fFF;
+            transition: 0.5s;
+            
           
           @media (max-width: 700px) {  
             height: 6rem;
@@ -158,6 +161,9 @@ export const Skills = styled.div`
               justify-self: center;
               grid-area: img;
               background: transparent;
+              perspective: 1000px;
+              animation: Scale 5s linear 0s infinite alternate none; 
+              
               @media (max-width: 700px) {    
                 width: 2rem;
                 margin: 1.5rem 0 1.5rem 0;
@@ -173,6 +179,13 @@ export const Skills = styled.div`
                 font-size: 0.7rem;
               }       
             }
-        
+@keyframes Scale {
+   from{
+        transform: scale(1);
+    }
+   to{
+        transform: scale(1.1);
+    }
+  }
 
       `

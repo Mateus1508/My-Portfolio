@@ -1,25 +1,14 @@
 import React from 'react';
 import {Projects, Item} from './projectStyle';
-import Carousel,{consts} from "react-elastic-carousel";
 
-const breakPoints = [
-  { width: 1500, itemsToShow: 1 },
-  { width: 2000, itemsToShow: 2 },
-  { width: 2200, itemsToShow: 3 },
-];
+
 
 const Project = () => {
   return (
     <Projects id="Project">
       <h1>Projetos</h1>
-      <Carousel 
-      breakPoints={breakPoints} 
-      easing="cubic-bezier(1,.15,.55,1.54)"
-      tiltEasing="cubic-bezier(0.110, 1, 1.000, 0.210)"
-      transitionMs={700}
-      itemPosition={consts.START}>
-      
-        <Item number="1">
+     
+        <Item>
         <h2>Front-End</h2>
           <img src="./images/portfolio.png" alt="" />
           <h3>Portfólio</h3>
@@ -28,7 +17,7 @@ const Project = () => {
             <button>Ver</button>
           </a>
         </Item>
-        <Item number="2">
+        <Item>
         <h2>Front-End</h2>
           <img src="./images/portfolio.png" alt="" />
           <h3>Portfólio</h3>
@@ -37,7 +26,7 @@ const Project = () => {
             <button>Ver</button>
           </a>
         </Item>
-        <Item number="3">
+        <Item>
         <h2>Front-End</h2>
           <img src="./images/portfolio.png" alt="" />
           <h3>Portfólio</h3>
@@ -47,7 +36,7 @@ const Project = () => {
           </a>
         </Item>
       
-      </Carousel>
+      
     </Projects>
   );
 };

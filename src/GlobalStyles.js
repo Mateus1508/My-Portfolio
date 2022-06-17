@@ -6,7 +6,6 @@ export const GlobalStyles = createGlobalStyle`
 }
   *{
     overflow-y: initial;
-    background-color: #777;
     margin: 0;
     padding: 0;
     border: 0;
@@ -20,6 +19,9 @@ export const GlobalStyles = createGlobalStyle`
     scroll-margin-top: 1rem;
     
   }
+
+  
+  
 
 
 `
