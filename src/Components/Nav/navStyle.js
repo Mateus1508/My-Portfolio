@@ -28,7 +28,7 @@ a{
   font-size: 1.5rem;
   padding: 0.9rem;
   border-radius: 0; 
-  transition: 0.5s;
+  transition: 0.3s;
   @media (max-width: 400px){
     padding: 0.5rem;  
   }
@@ -44,7 +44,7 @@ a{
       animation: shake 0.5s linear 1;
       color: #90e0ef;
       transform:  scale(1.3);
-      transition: 1s;
+      transition: .3s;
       border-radius: 0;
       background: transparent;
       border-bottom: 1px solid #90e0ef;

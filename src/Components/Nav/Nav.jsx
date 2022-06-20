@@ -3,7 +3,7 @@ import {Navigation} from './navStyle';
 
 import { Link } from "react-scroll";
 
-import { RiHome2Line } from 'react-icons/ri';
+import { AiOutlineHome } from 'react-icons/ai';
 import { CgProfile } from 'react-icons/cg';
 import { BsFileEarmarkCode } from 'react-icons/bs';
 import { BsCodeSlash } from 'react-icons/bs';
@@ -25,7 +25,7 @@ const Nav = () => {
       >
       <a
         onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}>
-        <RiHome2Line className="icon" />
+        <AiOutlineHome className="icon" />
       </a>
       </Link>
 

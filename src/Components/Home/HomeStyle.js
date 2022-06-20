@@ -13,7 +13,7 @@ export const HomePage = styled.div`
   height: 100vh;
   justify-content: space-around;
   align-items: center;
-  animation: bgColor 20s linear infinite alternate;
+  animation: bgColor 15s linear infinite alternate;
   @media (max-width:400px){
     grid-template-rows: repeat(auto-fit);
   grid-template-columns: 1fr 1fr;
@@ -25,18 +25,18 @@ export const HomePage = styled.div`
   div{
     flex-direction: column;
     grid-area: name;
+    overflow-y: hidden;
     h1{
       text-align: center;
-      color: #1A09FF;
+      color: #FFF;
       font-size: 4.5em;
       margin: 10px;
       animation: show 1.5s ease-in 1 normal; 
       flex-basis: 100%;
-      
     }
     h3{
       text-align: center;
-      font-size: 1em; 
+      font-size: 1.3em; 
       animation: show 1s ease-in 1 normal; 
     }
   }
@@ -125,15 +125,15 @@ export const HomePage = styled.div`
   }
   
   @keyframes bgColor {
-    0% { background-color: #8ecae6;
+    0% { background-color: #caf0f8;
     }
-    30% { background-color: #219ebc;
+    30% { background-color: #90e0ef;
     }
-    60% { background-color: #0096c7;
+    60% { background-color: #8ecae6;
     }
-    80% { background-color: #90e0ef;
+    80% { background-color: #219ebc;
     }
-    100% { background-color: #caf0f8;
+    100% { background-color: #0096c7;
     }
   }
   
