@@ -14,7 +14,7 @@ export const HomePage = styled.div`
   justify-content: space-around;
   align-items: center;
   animation: bgColor 15s linear infinite alternate;
-  @media (max-width:400px){
+  @media (max-width:450px){
     grid-template-rows: repeat(auto-fit);
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 
@@ -49,7 +49,7 @@ export const HomePage = styled.div`
     border: 1px ;
     border-radius: 50%;
     animation: coming 1.5s ease-out 1 normal; 
-    @media (max-width:400px){
+    @media (max-width:450px){
       grid-column: 1/3;
       grid-row: 1;
       justify-self: center;
@@ -75,14 +75,14 @@ export const HomePage = styled.div`
     .linkedin{
       grid-area: btn1;
       justify-self: end;
-      @media (max-width:400px){
+      @media (max-width:450px){
         justify-self: center;
       }
     }
     .github{
       grid-area: btn2;
       justify-self: start;
-      @media (max-width:400px){
+      @media (max-width:450px){
         justify-self: center;
       }
       }

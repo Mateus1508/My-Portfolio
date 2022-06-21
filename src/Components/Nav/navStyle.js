@@ -12,13 +12,13 @@ display: flex;
 gap: 0.8rem;
 background: #1115;
 border-radius: 10px;
-@media (max-width: 400px){
+@media (max-width: 450px){
   padding: 0.5rem 0 0.5rem 0;
   width: 100vw;
   border-radius: 0;
   justify-content: space-evenly;
   gap: 0rem;
-  bottom: 0.1rem;
+  bottom: 0rem;
 }
 a{
   overflow-y: hidden;
@@ -29,7 +29,7 @@ a{
   padding: 0.9rem;
   border-radius: 0; 
   transition: 0.3s;
-  @media (max-width: 400px){
+  @media (max-width: 450px){
     padding: 0.5rem;  
   }
   .icon{

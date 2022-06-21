@@ -7,6 +7,7 @@ const Project = () => {
   return (
     <Projects id="Project">
       <h1>Projetos</h1>
+      <span>Clique no card!</span>
       <div>
         <Item>
         <img src="./images/portfolio.png" alt="Portfolio" />
