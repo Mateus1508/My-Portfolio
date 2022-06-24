@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const Projects = styled.div`
 height: 100vh;
+@media (max-width:450px){
+    height: 220vh;
+}
 width: 100vw;
 display: flex;
 flex-direction: column;
@@ -10,6 +13,7 @@ align-items: center;
 h1{
     margin: 2.5rem 0 1rem 0;
     font-size: 4rem;
+    height: 15vh;
 }
 span{
     display: none;
@@ -26,8 +30,10 @@ div{
     height: 80vh;
     flex-direction: row;
     @media (max-width:450px){
+        height: 200vh;
         flex-direction: column;
-        justify-content: center;
+        justify-self: center;
+        width: max-content;
     }
 }
 
@@ -41,59 +47,25 @@ export const Item = styled.article`
     text-align: center;
     overflow-y: hidden;
     transition: .3s linear;
-    @media (max-width:450px){
-        margin: 1rem 2rem 1rem 2rem;
-        width: 80vw;
-        height: 30rem;
-       
-    }
+
     &:hover {
         height: 30rem;
-        @media (max-width:450px){
-            button{
-             transform: translateY(-10rem);
-             background-color: #0096C7;
-             color: #fff;
-         }
-            
-        }
+       
         button{
             display: inline-block;
         }
-    }
+            
+        }
+    
     img{
         width: 100%;
         max-height: 50%;
-        @media (max-width:450px){
-            width: 100%;
-            max-height: 100%;
-            z-index: 5;
-            transition: .3s;
-            &:hover {
-                filter: blur(15px); 
-            }
-        }
+       
     }
-    h3{
-        @media (max-width:450px){
-            display: none;
-           
-        }
-        
-    }
-    h2{
-        @media (max-width:450px){
-            display: none;
-           
-        }
-
-    }
+   
     p{
         margin: 1rem;
-        @media (max-width:450px){
-            display: none;
-           
-        }
+        
     }
     button{
         width: 5rem;
@@ -104,10 +76,7 @@ export const Item = styled.article`
         transition: .5s linear;
         cursor: pointer;
         display: none;
-        @media (max-width:450px){
-            display: inline-block;
-           
-        }
+        
         &:hover{
             background-color: #0096C7;
             color: #fff;

@@ -65,7 +65,7 @@ export const HomePage = styled.div`
       border-radius: 5px;
       &:hover{
         transition: 0.1s;
-        background-color: #90e0ef;
+        background-color: #ddd;
       }
       img{
         height: 3rem;
