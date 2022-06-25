@@ -12,7 +12,7 @@ display: flex;
 gap: 0.8rem;
 background: #1115;
 border-radius: 10px;
-@media (max-width: 450px){
+@media (max-width: 500px){
   padding: 0.5rem 0 0.5rem 0;
   width: 100vw;
   border-radius: 0;
@@ -29,7 +29,7 @@ a{
   padding: 0.9rem;
   border-radius: 0; 
   transition: 0.3s;
-  @media (max-width: 450px){
+  @media (max-width: 500px){
     padding: 0.5rem;  
   }
   .icon{

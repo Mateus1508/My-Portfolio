@@ -14,15 +14,16 @@ export const HomePage = styled.div`
   justify-content: space-around;
   align-items: center;
   animation: bgColor 15s linear infinite alternate;
-  @media (max-width:450px){
+  @media (max-width:920px){
+    place-items: center;
     grid-template-rows: repeat(auto-fit);
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 
   "img img"
   "name name"
   "btn1 btn2";
-  }
-  div{
+}
+div{
     flex-direction: column;
     grid-area: name;
     overflow-y: hidden;
@@ -30,9 +31,12 @@ export const HomePage = styled.div`
       text-align: center;
       color: #FFF;
       font-size: 4.5em;
-      margin: 10px;
+      margin: 1rem;
       animation: show 1.5s ease-in 1 normal; 
       flex-basis: 100%;
+      @media (max-width:540px){
+        font-size: 3em;
+      }
     }
     h3{
       text-align: center;
@@ -49,11 +53,15 @@ export const HomePage = styled.div`
     border: 1px ;
     border-radius: 50%;
     animation: coming 1.5s ease-out 1 normal; 
-    @media (max-width:450px){
+    @media (max-width:920px){
       grid-column: 1/3;
+      margin: 1rem 0 1rem 0;
       grid-row: 1;
       justify-self: center;
-      
+    }
+    @media (width: 375px){
+      height: 150px;
+      width: 150px;
     }
     }
     a{
@@ -75,14 +83,14 @@ export const HomePage = styled.div`
     .linkedin{
       grid-area: btn1;
       justify-self: end;
-      @media (max-width:450px){
+      @media (max-width:920px){
         justify-self: center;
       }
     }
     .github{
       grid-area: btn2;
       justify-self: start;
-      @media (max-width:450px){
+      @media (max-width:920px){
         justify-self: center;
       }
       }

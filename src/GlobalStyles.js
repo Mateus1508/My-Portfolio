@@ -12,6 +12,9 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     overflow-x: hidden;
   }
+  h1,h2,h3,h4,small{
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); 
+  }
   *, input, button {
     font-family: 'Roboto', sans-serif;
   }

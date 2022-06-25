@@ -1,26 +1,14 @@
 import React from 'react';
 
 import { Languages, Skills } from './skillStyle'; 
-import Carousel from "react-elastic-carousel";
-
-const breakPoints = [
-  { width: 1500, itemsToShow: 1 },
-  { width: 1200, itemsToShow: 2 },
-  { width: 2200, itemsToShow: 3 },
-];
 
 const Skill = () => {
   return (  
     <Languages id="Skill">
       <h1>Habilidades</h1>
-      <Carousel 
-      breakPoints={breakPoints}
-      easing="cubic-bezier(1,.15,.55,1.54)"
-      tiltEasing="cubic-bezier(0.110, 1, 1.000, 0.210)"
-      transitionMs={700}
-    >
-      <Skills className="frontend" number="1">
-        <h2>Desenvolvimento Frontend</h2>
+      <section>
+      <Skills className="frontend">
+        <h2>Frontend</h2>
         <div>
           <article>
             <h4>HTML5</h4>
@@ -59,8 +47,8 @@ const Skill = () => {
             </article>
           </div>
         </Skills>
-        <Skills className="backend" number="2">
-          <h2>Desenvolvimento Backend</h2>
+        <Skills className="backend">
+          <h2>Backend</h2>
           <div>
             <article>
               <h4>MySQL</h4>
@@ -79,7 +67,7 @@ const Skill = () => {
             </article>
           </div>
         </Skills>    
-          <Skills className="Outros" number="3">
+          <Skills className="Outros">
             <h2>Outros</h2>
             <div>
             <article>
@@ -104,7 +92,8 @@ const Skill = () => {
             </article>
             </div>
           </Skills>
-          </Carousel>
+      </section>
+        
     </Languages>
   );
 }

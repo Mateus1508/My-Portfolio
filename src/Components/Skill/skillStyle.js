@@ -1,57 +1,47 @@
 import styled from "styled-components";
 
-export const Languages = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "title "
-  "content ";
-  gap: 1rem;
+export const Languages = styled.section`
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  margin: 1rem;
   border: 1rem;
-  width: 50vw;
-  float: left;
-  @media (max-width: 1033px) {
-        display: grid;
-        height: 100%;
-        width: 100vw;
-        grid-template-columns: 100vw;
-        grid-template-areas: "title"
-                            "content";       
-        gap: 1rem;
-        margin: 0;
-        border: 1rem;
-        justify-items: center;
-      }
+  width: 100vw;
+  @media (max-width:1200px){
+    height: max-content;
+  }
   h1{
     grid-area: title;
+    font-size: 64px;
     text-align: center;
     align-self: center;
-    color: #fff;
+    color: #000;
+    height: 15vh;
+    @media (max-width:1200px){
+      height: 10vh;
+      font-size: 48px;
+
+    }
   }
-  .rec.rec-arrow:disabled {
-    visibility: hidden;
-}
-.rec.rec-arrow {
-  background-color: #fff;
-  
-  visibility: hidden;
-  
-}
-.rec.rec-arrow:hover {
-  background-color: #fff;
-  color: #000;
-}
 
-.rec-carousel-item:focus {
-  outline: none;
-  box-shadow: inset 0 0 1px 1px lightgrey;
+section {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  @media (max-width:1200px){
+    flex-direction: column;
+    place-items: center;
+  }
 }
-
 `
 export const Skills = styled.div`
-    transform-style: preserve-3d;
     display: grid;
+    :nth-child(2){
+      margin: 1rem 3rem 1rem 3rem;
+      @media (max-width: 1200px){
+        margin: 0;
+      }
+    }
+    margin: 1rem 0 1rem 0;
     grid-area: content;
     grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
     grid-template-areas: "1 1"
@@ -60,41 +50,35 @@ export const Skills = styled.div`
     border: 1rem;
     align-items: flex-start;
     background: rgba(255, 255, 255, 0.16);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    @media (max-width: 1033px) {
-      width: 60%;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2); 
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    @media (max-width: 1200px) {
+     width: 50vw;
     }
-    @media (max-width: 768px) {
-     width: 100vw;
-     grid-template-columns: repeat(auto-fit, 1fr);
-     grid-template-areas: "1 1"
-                         "2 2";
-    grid-template-rows: 190px 1fr;
+    @media (max-width: 750px) {
+     width: 60vw;
+    }
+    @media (max-width: 600px) {
+     width: 70vw;
+    }
+    @media (max-width: 540px) {
+     width: 90vw;
     }
     h2{
       grid-area: 1;
       text-align: center;
       align-self: center;
-      margin: 1rem;
-      color: #fff;
+      color: #000;
       background-color: transparent;
-      height: 49%;
-      border-bottom: 1px solid #fff;
-      white-space: nowrap;
-      @media (max-width: 1033px) {
+      @media (max-width: 1200px) {
           text-align: center;
           font-size: 25px;
           font-weight: bold;
       }
-      @media (max-width: 769px) {
+      @media (max-width: 1200px) {
           text-align: center;
           font-size: 23px;
           font-weight: bold;
-          white-space: normal;
       }
     }
     div{
@@ -102,21 +86,22 @@ export const Skills = styled.div`
       grid-area: 2;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 1rem;
-      margin: 20px;
+      place-items: center;
       background: transparent;
-
-/*       @media (max-width: 1033px) {
-          grid-template-columns: 1fr 1fr 1fr;
+      margin-bottom: 1rem;   
+     
+      @media (max-width: 1200px) {
+          grid-template-columns: repeat(1fr);
           grid-template-areas: "1 1 1"
                               "2 2 2";
-        justify-items: center;        
-      }       */
-
-      @media (max-width: 700px) {
+        justify-items: center;     
+      }      
+      @media (max-width: 500px) {
           grid-template-columns: 1fr 1fr;
           grid-template-areas: "1 1"
                               "2 2";
-        justify-items: center;        
+        justify-items: center;     
+        margin-bottom: 1rem;   
       }      
       }
     
@@ -127,19 +112,13 @@ export const Skills = styled.div`
             "img"
             "small";
             padding: 1rem 2rem;
+            margin: 0 .5rem 0 .5rem;
             border-radius: 10px;
             margin-top: .1rem;
             height: 9rem;
             width: 7rem;
-            background: #fFF;
+            background:  #e4f7fb;
             transition: 0.5s;
-            
-          
-          @media (max-width: 700px) {  
-            height: 6rem;
-            width: 5rem;
-            padding: 1rem 0 1rem 0;
-          }
         }
           h4{
             font-family: 'Bebas Neue', cursive;
@@ -150,9 +129,6 @@ export const Skills = styled.div`
               justify-self: center;
               text-align: center;
               background: transparent;
-              @media (max-width: 700px) {  
-               font-size: 0.8rem;
-              }
             }
             img{
               max-width: 3rem;
@@ -163,28 +139,20 @@ export const Skills = styled.div`
               background: transparent;
               perspective: 1000px;
               animation: Scale 5s linear 0s infinite alternate none; 
-              
-              @media (max-width: 700px) {    
-                width: 2rem;
-                margin: 1.5rem 0 1.5rem 0;
-              }
               }
             small{
               align-self: center;
               justify-self: center;
               grid-area: small;
               text-align: center; 
-              background: transparent;   
-              @media (max-width: 700px) {  
-                font-size: 0.7rem;
-              }       
+              background: transparent;        
             }
 @keyframes Scale {
    from{
         transform: scale(1);
     }
    to{
-        transform: scale(1.1);
+        transform: scale(1.2);
     }
   }
 

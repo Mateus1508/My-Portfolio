@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-export const Projects = styled.div`
+export const Projects = styled.section`
 height: 100vh;
-@media (max-width:450px){
-    height: 220vh;
+@media (max-width:1200px){
+    height: max-content;
 }
 width: 100vw;
 display: flex;
@@ -26,14 +26,16 @@ span{
 div{
     justify-content: center;
     display: flex;
-    width: 100vw;
+    width: max-content;
     height: 80vh;
     flex-direction: row;
-    @media (max-width:450px){
-        height: 200vh;
+    @media (max-width:1200px){
+        height: max-content;
+    }
+    @media (max-width:930px){
+        height: max-content;
         flex-direction: column;
         justify-self: center;
-        width: max-content;
     }
 }
 
