@@ -1,74 +1,41 @@
 import styled from 'styled-components';
 
 export const Projects = styled.section`
-height: 100vh;
-@media (max-width:1200px){
-    height: max-content;
-}
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(auto-fit, 1fr);
+max-height: max-content;
 width: 100vw;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+place-items: center;
 h1{
+    text-align: center;
     margin: 2.5rem 0 1rem 0;
     font-size: 4rem;
-    height: 15vh;
-}
-span{
-    display: none;
-    @media (max-width:450px){
-        opacity: 0;
-        display: block;
-        animation: fadeIn 2s ease-in 5 alternate;
-    }
+    grid-column: 1/4;
 }
 div{
+    grid-column: 1/4;
+    margin-top: 2rem;
+    text-align: center;
+    justify-content: center;
+}
+section{
+    grid-column: 1/4;
     justify-content: center;
     display: flex;
-    width: max-content;
-    height: 80vh;
-    flex-direction: row;
-    @media (max-width:1200px){
-        height: max-content;
-    }
-    @media (max-width:930px){
-        height: max-content;
-        flex-direction: column;
-        justify-self: center;
-    }
+    flex-wrap: wrap;
+    width: 80vw;   
+    max-height: 70vh;   
+    border: 1px solid #90e0ef; 
+    overflow-y: scroll;
 }
-
-
 `
 export const Item = styled.article`
     box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2); 
     margin: 2rem;
     width: 15rem;
-    height: 25rem;
     text-align: center;
-    overflow-y: hidden;
     transition: .3s linear;
-
-    &:hover {
-        height: 30rem;
-       
-        button{
-            display: inline-block;
-        }
-            
-        }
-    
-    img{
-        width: 100%;
-        max-height: 50%;
-       
-    }
-   
-    p{
-        margin: 1rem;
-        
-    }
     button{
         width: 5rem;
         height: 3rem;
@@ -77,7 +44,7 @@ export const Item = styled.article`
         background-color: #90e0ef;
         transition: .5s linear;
         cursor: pointer;
-        display: none;
+       
         
         &:hover{
             background-color: #0096C7;
@@ -85,10 +52,22 @@ export const Item = styled.article`
 
         }
     }
-    @keyframes fadeIn {
-        from { opacity: 1}
-        to { opacity:0;
-        display: none;}
+`
+
+export const Filter = styled.div`
+display: flex;
+text-align: center;
+    button {
+        background: #868fba;
+        color: #ffff;
+        border: 0;
+        padding: 5px 10px;
+        margin: 5px;
+        border-radius: 3px;
+        font-size: 1rem;
+        transition: 0.3s ease-in;
     }
-  
+    button:hover {
+        background: #861cbe;
+    }
 `

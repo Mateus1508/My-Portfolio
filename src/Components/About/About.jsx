@@ -1,23 +1,13 @@
 import React from 'react';
-import {Container} from './aboutStyle';
+import {Description} from './aboutStyle';
 
 const About = () => {
   return (
-    <Container id="About">
-     <section>
+    <Description id="About">
         <h1>Sobre mim</h1>
         <p></p>
-      </section>
-      <section>
-        <h1>Escolaridade</h1>
-        <p></p>
-      </section>
-      <section>
-        <h1>Experiência</h1>
-        <p></p>
-      </section>
-       
-    </Container>
+        <img src="" alt="" />
+    </Description>
   );
 };
 

@@ -12,7 +12,13 @@ display: flex;
 gap: 0.8rem;
 background: #1115;
 border-radius: 10px;
+opacity: 0.2;
+transition: 1s;
+&:hover{
+  opacity: 1;
+}
 @media (max-width: 500px){
+  opacity: 1;
   padding: 0.5rem 0 0.5rem 0;
   width: 100vw;
   border-radius: 0;

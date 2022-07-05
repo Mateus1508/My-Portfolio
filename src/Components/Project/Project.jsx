@@ -1,54 +1,55 @@
-import React from 'react';
-import {Projects, Item} from './projectStyle';
-
-
+import Repositories from "./Repositories";
+import {Projects, Filter} from "./projectStyle"
+import ApiGithub from "/src/Services/ApiGithub";
+import { useEffect, useState } from "react";
 
 const Project = () => {
+  const [repos, setRepos] = useState([]);
+  const [filter, setFilter] = useState([]);
+
+  useEffect(() => {
+    ApiGithub.get("repos").then(({ data }) => {
+      setRepos(data);
+      setFilter(data);
+    });
+  }, []);
+
+  const Todos = () => {
+    setRepos(filter);
+  };
+  const filterFront = () => {
+    const frontRepos = filter.filter((repos) => repos.name.includes("front"));
+    setRepos(frontRepos);
+  };
+
+  const filterBack = () => {
+    const backRepos = filter.filter((repos) => repos.name.includes("back"));
+    setRepos(backRepos);
+  };
   return (
     <Projects id="Project">
       <h1>Projetos</h1>
-      <span>Clique no card!</span>
-      <div>
-        <Item>
-        <img src="./images/portfolio.png" alt="Portfolio" />
-        <h2>Front-End</h2>
-          <h3>Portfólio</h3>
-          <p>Projeto criado para aprender e praticar conhecimentos do React (components, hooks, dependencias) e mostrar um pouco sobre mim e minhas skills.</p>
-          <a href="" _blank>
-            <button>Código</button>
-          </a>
-          <a href="" _blank>
-            <button>Demo</button>
-          </a>
-        </Item>
-        <Item>
-        <img src="./images/portfolio.png" alt="Portfolio" />
-        <h2>Front-End</h2>
-          <h3>Portfólio</h3>
-          <p>Projeto criado para aprender e praticar conhecimentos do React (components, hooks, dependencias) e mostrar um pouco sobre mim e minhas skills.</p>
-          <a href="" _blank>
-            <button>Código</button>
-          </a>
-          <a href="" _blank>
-            <button>Demo</button>
-          </a>
-        </Item>
-        <Item>
-        <img src="./images/portfolio.png" alt="Portfolio" />
-        <h2>Front-End</h2>
-          <h3>Portfólio</h3>
-          <p>Projeto criado para aprender e praticar conhecimentos do React (components, hooks, dependencias) e mostrar um pouco sobre mim e minhas skills.</p>
-          <a href="" _blank>
-            <button>Código</button>
-          </a>
-          <a href="" _blank>
-            <button>Demo</button>
-          </a>
-        </Item>
-       
-      </div>
+    
+      <Filter>
+        <button onClick={filterFront}>Frontend</button>
+        <button onClick={filterBack}>Backend</button>
+        <button onClick={Todos}>Todos</button>
+      </Filter>
+
+      <section>
+        {repos?.map((repos) => (
+          <Repositories
+          key={repos.id}
+          id={repos.id}
+          name={repos.description}
+          demo={repos.homepage}
+          github={repos.html_url}
+          language={repos.language}
+          />
+          ))}
+      </section>
     </Projects>
   );
-};
+}
 
 export default Project;
