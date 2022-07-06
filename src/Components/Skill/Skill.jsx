@@ -35,11 +35,6 @@ const Skill = () => {
             <small> Intermediário</small>
             <img src="./images/bootstrap.png" alt="Bootstrap" />
           </article>
-          <article>
-            <h4>Styled Components</h4>
-            <small> Básico</small>
-            <img src="./images/styled-components.png" alt="Styled Components"/>
-          </article>
             <article>
               <h4>Sass</h4>
               <small>Básico</small>

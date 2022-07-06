@@ -2,6 +2,7 @@ import Repositories from "./Repositories";
 import {Projects, Filter} from "./projectStyle"
 import ApiGithub from "/src/Services/ApiGithub";
 import { useEffect, useState } from "react";
+import {Button} from "../Buttons/buttonStyle";
 
 const Project = () => {
   const [repos, setRepos] = useState([]);
@@ -31,9 +32,9 @@ const Project = () => {
       <h1>Projetos</h1>
     
       <Filter>
-        <button onClick={filterFront}>Frontend</button>
-        <button onClick={filterBack}>Backend</button>
-        <button onClick={Todos}>Todos</button>
+        <Button onClick={filterFront}>Frontend</Button>
+        <Button onClick={filterBack}>Backend</Button>
+        <Button onClick={Todos}>Todos</Button>
       </Filter>
 
       <section>

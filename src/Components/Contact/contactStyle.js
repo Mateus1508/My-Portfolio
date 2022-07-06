@@ -13,8 +13,7 @@ export const ContactContainer = styled.div`
   form{
     grid-area: content;
     background: rgba(255, 255, 255, 0.16);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px #90e0ef;
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -38,7 +37,7 @@ export const ContactContainer = styled.div`
     padding: 20px;
     height: 70vh;
     margin: 2vh 0 3vh 0;
-    color: #fff;
+    color: #000;
     h2 {
       background-color: transparent; 
       justify-items: center;
@@ -79,7 +78,7 @@ export const ContactContainer = styled.div`
             input{
               margin-bottom: 1px;
               background-color: rgba(255, 255, 255, 0.2);
-              color: #fff;
+              color: #000;
               border-bottom: 1px solid #fff;
               align-items: center;
               text-align: center;

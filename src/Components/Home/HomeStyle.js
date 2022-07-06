@@ -13,7 +13,7 @@ export const HomePage = styled.div`
   height: 100vh;
   justify-content: space-around;
   align-items: center;
-  animation: bgColor 15s linear infinite alternate;
+  animation: bgColor 10s linear infinite alternate;
   @media (max-width:920px){
     place-items: center;
     grid-template-rows: repeat(auto-fit);
@@ -67,13 +67,14 @@ div{
     a{
       animation: buttonComing 2s ease-out 1 normal; 
       background-color: #fff;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
       width: 10rem;
       display: flex;
       justify-content: center;
       border-radius: 5px;
       &:hover{
         transition: 0.1s;
-        background-color: #ddd;
+        background-color: #90e0ef;
       }
       img{
         height: 3rem;

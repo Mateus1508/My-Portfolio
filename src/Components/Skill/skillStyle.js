@@ -3,12 +3,8 @@ import styled from "styled-components";
 export const Languages = styled.section`
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  border: 1rem;
+  height: max-content;
   width: 100vw;
-  @media (max-width:1200px){
-    height: max-content;
-  }
   h1{
     grid-area: title;
     font-size: 64px;
@@ -25,7 +21,6 @@ export const Languages = styled.section`
 
 section {
   display: flex;
-  width: 100%;
   justify-content: center;
   @media (max-width:1200px){
     flex-direction: column;
@@ -35,23 +30,15 @@ section {
 `
 export const Skills = styled.div`
     display: grid;
-    :nth-child(2){
-      margin: 1rem 3rem 1rem 3rem;
-      @media (max-width: 1200px){
-        margin: 0;
-      }
-    }
-    margin: 1rem 0 1rem 0;
-    grid-area: content;
-    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
-    grid-template-areas: "1 1"
-                         "2 2";
-    grid-template-rows: 130px 1fr;
+    margin: 1rem;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-areas: "1 1 1"
+                         "2 2 2";
     border: 1rem;
     align-items: flex-start;
     background: rgba(255, 255, 255, 0.16);
-    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2); 
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px #90e0ef; 
     @media (max-width: 1200px) {
      width: 50vw;
     }
@@ -70,6 +57,7 @@ export const Skills = styled.div`
       align-self: center;
       color: #000;
       background-color: transparent;
+      margin: 1rem 0 1rem 0;
       @media (max-width: 1200px) {
           text-align: center;
           font-size: 25px;
@@ -84,12 +72,13 @@ export const Skills = styled.div`
     div{
       display: grid;
       grid-area: 2;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr 1fr 0.5fr;
       gap: 1rem;
       place-items: center;
+      margin: 0.5rem;
       background: transparent;
-      margin-bottom: 1rem;   
-     
+      max-height: max-content;
       @media (max-width: 1200px) {
           grid-template-columns: repeat(1fr);
           grid-template-areas: "1 1 1"
@@ -113,11 +102,10 @@ export const Skills = styled.div`
             "small";
             padding: 1rem 2rem;
             margin: 0 .5rem 0 .5rem;
-            border-radius: 10px;
             margin-top: .1rem;
             height: 9rem;
             width: 7rem;
-            background:  #e4f7fb;
+            box-shadow: 0 0 10px #90e0ef; 
             transition: 0.5s;
         }
           h4{
@@ -137,8 +125,10 @@ export const Skills = styled.div`
               justify-self: center;
               grid-area: img;
               background: transparent;
-              perspective: 1000px;
-              animation: Scale 5s linear 0s infinite alternate none; 
+              transition: 0.5s;
+              &:hover{
+                transform: scale(1.2) rotateZ(1turn);
+              }
               }
             small{
               align-self: center;
@@ -147,13 +137,4 @@ export const Skills = styled.div`
               text-align: center; 
               background: transparent;        
             }
-@keyframes Scale {
-   from{
-        transform: scale(1);
-    }
-   to{
-        transform: scale(1.2);
-    }
-  }
-
       `
