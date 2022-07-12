@@ -1,6 +1,6 @@
 import React from 'react';
 import {Item} from './projectStyle';
-import {Button} from '../Buttons/buttonStyle';
+import {ButtonMedium} from '../Buttons/buttonStyle';
 
 
 
@@ -9,11 +9,11 @@ const Repositories = ({id, filter, name, demo, github, language }) => {
         <Item id={id} name={filter}>
         <h2>{name}</h2>
         <span>{language}</span>
-          <a href={github} rel="noopener noreferrer" _blank>
-            <Button>Código</Button>
+          <a href={github} rel="noopener noreferrer" _blank="true">
+            <ButtonMedium>Código</ButtonMedium>
           </a>
-          <a href={demo} rel="noopener noreferrer" _blank>
-            <Button>Demo</Button>
+          <a href={demo} rel="noopener noreferrer" _blank="true">
+            <ButtonMedium>Demo</ButtonMedium>
           </a>
         </Item>
   );

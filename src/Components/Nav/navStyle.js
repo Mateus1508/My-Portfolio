@@ -10,7 +10,7 @@ padding: 0;
 width: max-content;
 display: flex;
 gap: 0.8rem;
-background: #1115;
+background: rgba(0, 0, 0, 0.8);
 border-radius: 10px;
 opacity: 0.2;
 transition: 1s;

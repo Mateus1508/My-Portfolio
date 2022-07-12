@@ -26,12 +26,20 @@ section{
     display: flex;
     flex-wrap: wrap;
     width: 90vw;     
+    overflow-y: auto;
+    height: 60vh;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    &::-webkit-scrollbar{
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
 }
 `
 export const Item = styled.article`
     box-shadow: 0 0 15px #90e0ef; 
     margin: 2rem;
     width: 15rem;
+    background: #023e8a;
     text-align: center;
     transition: .3s linear;
     display: grid;
@@ -44,6 +52,7 @@ export const Item = styled.article`
     h2{
         grid-row: 2;
         grid-column: 1/3;
+        margin: 0 1rem 0 1rem;
     }
     span{
         grid-column: 1/3;
@@ -54,4 +63,7 @@ export const Item = styled.article`
 export const Filter = styled.div`
 display: flex;
 text-align: center;
+flex-wrap: wrap;
+margin-bottom: 1rem;
+border-bottom: 1px solid #fff;
 `

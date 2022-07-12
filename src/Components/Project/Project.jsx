@@ -2,7 +2,7 @@ import Repositories from "./Repositories";
 import {Projects, Filter} from "./projectStyle"
 import ApiGithub from "/src/Services/ApiGithub";
 import { useEffect, useState } from "react";
-import {Button} from "../Buttons/buttonStyle";
+import {ButtonLarge} from "../Buttons/buttonStyle";
 
 const Project = () => {
   const [repos, setRepos] = useState([]);
@@ -27,14 +27,20 @@ const Project = () => {
     const backRepos = filter.filter((repos) => repos.name.includes("back"));
     setRepos(backRepos);
   };
+  const filterCodeSandbox = () => {
+    const codeSandbox = filter.filter((repos) => repos.name.includes("codesandbox"));
+    setRepos(codeSandbox);
+  };
+
   return (
     <Projects id="Project">
       <h1>Projetos</h1>
     
       <Filter>
-        <Button onClick={filterFront}>Frontend</Button>
-        <Button onClick={filterBack}>Backend</Button>
-        <Button onClick={Todos}>Todos</Button>
+        <ButtonLarge onClick={filterFront}>Frontend</ButtonLarge>
+        <ButtonLarge onClick={filterCodeSandbox}>CodeSandbox</ButtonLarge>
+        <ButtonLarge onClick={filterBack}>Backend</ButtonLarge>
+        <ButtonLarge onClick={Todos}>Todos</ButtonLarge>
       </Filter>
 
       <section>

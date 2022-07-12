@@ -7,7 +7,9 @@ const Home = () => {
     <HomePage id="Home">
       <div>
         <h3>Olá, sou</h3>
-        <h1>Mateus Belmonte</h1>
+        <div className="text-reveal">
+          <h1>Mateus Belmonte</h1>
+        </div>
         <h3>desenvolvedor Frontend</h3>
       </div>
       <img className="perfil" src="./images/Perfil.jpg" alt="Mateus, Foto de perfil" />   

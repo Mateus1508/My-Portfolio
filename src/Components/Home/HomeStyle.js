@@ -13,7 +13,6 @@ export const HomePage = styled.div`
   height: 100vh;
   justify-content: space-around;
   align-items: center;
-  animation: bgColor 10s linear infinite alternate;
   @media (max-width:920px){
     place-items: center;
     grid-template-rows: repeat(auto-fit);
@@ -26,22 +25,41 @@ export const HomePage = styled.div`
 div{
     flex-direction: column;
     grid-area: name;
-    overflow-y: hidden;
+    overflow: hidden;
+    position: relative;
+    &::after{
+      animation: text-reveal 1.5s ease forwards;
+      background-color: #fff;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      content: '';
+      display: block;
+      position: absolute;
+    }
+    @keyframes text-reveal {
+      from { transform: translateX(-101%) }
+      to { transform: translateX(101%) }
+      
+    }
     h1{
       text-align: center;
       color: #FFF;
       font-size: 4.5em;
       margin: 1rem;
-      animation: show 1.5s ease-in 1 normal; 
+      opacity: 0;
+      animation: show 1ms 0.5s forwards; 
       flex-basis: 100%;
       @media (max-width:540px){
         font-size: 3em;
       }
     }
     h3{
+      opacity: 0;
       text-align: center;
       font-size: 1.3em; 
-      animation: show 1s ease-in 1 normal; 
+      animation: show 1ms 0.5s forwards; 
     }
   }
    .perfil{
@@ -72,8 +90,8 @@ div{
       display: flex;
       justify-content: center;
       border-radius: 5px;
+      transition: 0.3s;
       &:hover{
-        transition: 0.1s;
         background-color: #90e0ef;
       }
       img{
@@ -132,34 +150,19 @@ div{
       transform: translateX(0rem);
     }
   }
-  
-  @keyframes bgColor {
-    0% { background-color: #caf0f8;
+
+  @keyframes bgAnimation {
+    0% { background-position: 0% 50%;
     }
-    30% { background-color: #90e0ef;
+    50% { background-position: 100% 50%;
     }
-    60% { background-color: #8ecae6;
-    }
-    80% { background-color: #219ebc;
-    }
-    100% { background-color: #0096c7;
+    100% { background-position: 0 50%;
     }
   }
-  
+
   @keyframes show {
-    0%{
-      opacity: 0;
-      transform: scale(0.5);
-    }
-    50%{
-      opacity: 1s;
-      transform: scale(1.1);
-      
-    }
-    100%{
+   to{
       opacity: 1;
-      transform: scale(1);
-      
     }
   }
   `
