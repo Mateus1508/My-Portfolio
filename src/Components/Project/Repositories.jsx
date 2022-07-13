@@ -9,11 +9,11 @@ const Repositories = ({id, filter, name, demo, github, language }) => {
         <Item id={id} name={filter}>
         <h2>{name}</h2>
         <span>{language}</span>
-          <a href={github} rel="noopener noreferrer" _blank="true">
+          <a href={github} target="_blank" rel="noopener noreferrer">
             <ButtonMedium>Código</ButtonMedium>
           </a>
-          <a href={demo} rel="noopener noreferrer" _blank="true">
-            <ButtonMedium>Demo</ButtonMedium>
+          <a href={demo} target="_blank" rel="noopener noreferrer">
+            <ButtonMedium >Demo</ButtonMedium>
           </a>
         </Item>
   );

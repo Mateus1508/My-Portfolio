@@ -9,7 +9,7 @@ const Contact = () => {
   const form = useRef();
 
   const handleSubmit = (e) => {
-    setFormErrors(validate(formValues));
+    setFormErrors(formValues);
     setIsSubmit(true);
   };
   const sendEmail = (e) => {
@@ -40,21 +40,6 @@ const Contact = () => {
         console.log(formValues);
       }
     }, [formErrors]);
-    
-    const validate = (values) => {
-      const errors = {};
-      if (!values.email) {
-        errors.email = "O email não pode estar vazio!";
-      } else if (!values.email.includes("@", ".")) {
-        errors.email = "Formato do e-mail não aceito!";
-      }
-      else if (!values.message) {
-        errors.message = "É necessário por uma mensagem!";
-      } else if (values.message.length <= 10) {
-        errors.message = "A mensagem deve ter ao menos 10 caracteres!";
-      }
-      return errors;
-    };
 
   return (
     <ContactContainer id="Contact">
@@ -67,8 +52,8 @@ const Contact = () => {
             placeholder="Seu nome"
             name="name" 
             maxlength="30"
+            required
             />
-          
           
             <label for="email">Email</label>
             <input type="email" 
@@ -77,11 +62,9 @@ const Contact = () => {
             maxlength="45"
             onChange={handleChanges} 
             value={formValues.email}
+            required
             />
-            <span>{formErrors.email}</span>
          
-          
-          
             <label for="message">Mensagem</label>
             <textarea 
             name="message"
@@ -91,13 +74,13 @@ const Contact = () => {
             maxlength="700" 
             wrap="hard" 
             value={formValues.message}
+            required
             />
-            <span>{formErrors.message}</span>
          
           <ButtonMedium className="btn"type="submit" onClick={handleSubmit}>Enviar</ButtonMedium>
       </form>
       <Footer>
-        <a href="https://github.com/Mateus1508">Developed by Mateus1508</a>
+        <a href="https://github.com/Mateus1508" target="_blank" rel="noopener noreferrer">Developed by Mateus1508</a>
       </Footer>
 
 
