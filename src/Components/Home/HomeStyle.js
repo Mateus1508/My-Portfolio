@@ -92,7 +92,8 @@ div{
       border-radius: 5px;
       transition: 0.3s;
       &:hover{
-        background-color: #90e0ef;
+        background-color: #48cae4;
+        box-shadow: 0 0 15px #90e0ef;
       }
       img{
         height: 3rem;

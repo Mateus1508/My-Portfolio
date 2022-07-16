@@ -42,7 +42,7 @@ const Contact = () => {
     }, [formErrors]);
 
   return (
-    <ContactContainer id="Contact">
+    <ContactContainer id="Contact" data-aos="fade-right">
 
       <form ref={form} onSubmit={sendEmail}>
           <h2 className="title" >Envie o seu feedback!</h2>
@@ -68,7 +68,7 @@ const Contact = () => {
             <label for="message">Mensagem</label>
             <textarea 
             name="message"
-            placeholder="Gostaria de te contratar para..."
+            placeholder="Gostaria de te contatar para..."
             onChange={handleChanges}
             rows="3"
             maxlength="700" 
@@ -77,7 +77,7 @@ const Contact = () => {
             required
             />
          
-          <ButtonMedium className="btn"type="submit" onClick={handleSubmit}>Enviar</ButtonMedium>
+          <ButtonMedium type="submit" onClick={handleSubmit}>Enviar</ButtonMedium>
       </form>
       <Footer>
         <a href="https://github.com/Mateus1508" target="_blank" rel="noopener noreferrer">Developed by Mateus1508</a>

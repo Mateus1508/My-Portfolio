@@ -4,10 +4,10 @@ import { Languages, Skills } from './skillStyle';
 
 const Skill = () => {
   return (  
-    <Languages id="Skill">
+    <Languages id="Skill" data-aos="zoom-in">
       <h1>Habilidades</h1>
       <section>
-      <Skills className="frontend">
+      <Skills className="frontend" data-aos="fade-right">
         <h2>Frontend</h2>
         <div>
           <article>
@@ -42,7 +42,7 @@ const Skill = () => {
             </article>
           </div>
         </Skills>
-        <Skills className="backend">
+        <Skills className="backend" data-aos="fade-down">
           <h2>Backend</h2>
           <div>
             <article>
@@ -62,7 +62,7 @@ const Skill = () => {
             </article>
           </div>
         </Skills>    
-          <Skills className="Outros">
+          <Skills className="Outros" data-aos="fade-left">
             <h2>Outros</h2>
             <div>
             <article>

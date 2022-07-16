@@ -34,16 +34,16 @@ const Project = () => {
 
   return (
     <Projects id="Project">
-      <h1>Projetos</h1>
+      <h1 data-aos="flip-left">Projetos</h1>
     
-      <Filter>
+      <Filter data-aos="fade-left">
         <ButtonLarge onClick={filterFront}>Frontend</ButtonLarge>
         <ButtonLarge onClick={filterCodeSandbox}>CodeSandbox</ButtonLarge>
         <ButtonLarge onClick={filterBack}>Backend</ButtonLarge>
         <ButtonLarge onClick={Todos}>Todos</ButtonLarge>
       </Filter>
 
-      <section>
+      <section data-aos="zoom-in">
         {repos?.map((repos) => (
           <Repositories
           key={repos.id}

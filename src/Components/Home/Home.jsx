@@ -12,7 +12,7 @@ const Home = () => {
         </div>
         <h3>desenvolvedor Frontend</h3>
       </div>
-      <img className="perfil" src="./images/Perfil.jpg" alt="Mateus, Foto de perfil" />   
+      <img className="perfil" src="./images/Perfil.jpg" alt="Mateus, Foto de perfil"/>   
       <a className="linkedin" href="https://www.linkedin.com/in/mateus-belmonte-64b6b11a3/" target="_blank" rel="noopener noreferrer">
       <img src="./images/linkedin.png" alt="LinkedIn" />
       </a>
