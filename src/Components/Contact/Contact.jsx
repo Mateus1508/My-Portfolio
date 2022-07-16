@@ -1,6 +1,6 @@
 import React, {useRef, useEffect, useState} from 'react';
 import emailjs from '@emailjs/browser';
-import { ButtonLarge } from '../Buttons/buttonStyle';
+import { ButtonLarge } from './Components/Buttons/buttonStyle';
 
 import { ContactContainer, Footer } from './contactStyle';
 
