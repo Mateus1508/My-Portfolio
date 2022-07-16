@@ -1,6 +1,6 @@
 import React from 'react';
 import {Item} from './projectStyle';
-import {ButtonMedium} from '../Buttons/buttonStyle';
+import {ButtonMedium} from '../Button/buttonStyle';
 
 
 

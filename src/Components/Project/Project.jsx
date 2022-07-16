@@ -2,7 +2,7 @@ import Repositories from "./Repositories";
 import {Projects, Filter} from "./projectStyle"
 import ApiGithub from "/src/Services/ApiGithub";
 import { useEffect, useState } from "react";
-import {ButtonLarge} from "../Buttons/buttonStyle";
+import {ButtonLarge} from "../Button/buttonStyle";
 
 const Project = () => {
   const [repos, setRepos] = useState([]);
