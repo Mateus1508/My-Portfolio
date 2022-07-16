@@ -1,6 +1,6 @@
 import React, {useRef, useEffect, useState} from 'react';
 import emailjs from '@emailjs/browser';
-import { ButtonLarge } from './Components/Buttons/buttonStyle';
+//import { ButtonLarge } from './Components/Buttons/buttonStyle';
 
 import { ContactContainer, Footer } from './contactStyle';
 
@@ -77,7 +77,7 @@ const Contact = () => {
             required
             />
          
-          <ButtonLarge type="submit" onClick={handleSubmit}>Enviar</ButtonLarge>
+          <button type="submit" onClick={handleSubmit}>Enviar</button>
       </form>
       <Footer>
         <a href="https://github.com/Mateus1508" target="_blank" rel="noopener noreferrer">Developed by Mateus1508</a>
