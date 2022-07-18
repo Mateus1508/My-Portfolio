@@ -116,10 +116,12 @@ export const Skills = styled.div`
               justify-self: center;
               text-align: center;
               background: transparent;
+              color: #ffff;
             }
-            img{
-              max-width: 3rem;
-              margin: 1rem;
+            .icon{
+              height: 3rem;
+              color: #ffff;
+              width: 3rem;
               align-self: center;
               justify-self: center;
               grid-area: img;
@@ -127,6 +129,7 @@ export const Skills = styled.div`
               transition: 0.5s;
               &:hover{
                 transform: scale(1.2) rotateZ(1turn);
+                color: #90e0ef;
               }
               }
             small{

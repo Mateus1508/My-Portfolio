@@ -2,7 +2,7 @@ import React from 'react';
 import {Description} from './aboutStyle';
 import {IoIosMusicalNote} from 'react-icons/io'
 import {FaBasketballBall} from 'react-icons/fa'
-import {IoFootballOutline} from 'react-icons/io5'
+import {BiFootball} from 'react-icons/bi'
 
 const About = () => {
   return (
@@ -18,7 +18,7 @@ const About = () => {
         <section >
           <h3 data-aos="zoom-out">Hobbies</h3>
           <div data-aos="zoom-out">
-            <IoFootballOutline className="icon"/>
+            <BiFootball className="icon"/>
             <FaBasketballBall className="icon"/>
             <IoIosMusicalNote className="icon"/>
           </div>

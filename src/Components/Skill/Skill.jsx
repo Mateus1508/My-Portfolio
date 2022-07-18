@@ -1,4 +1,12 @@
 import React from 'react';
+import {AiFillHtml5} from 'react-icons/ai'
+import {GrMysql} from 'react-icons/gr'
+import {SiCsharp, SiAzuredevops, SiAdobephotoshop, SiPhp} from 'react-icons/si'
+import {FaReact, FaBootstrap, FaSass, FaNodeJs, FaGitAlt, FaGithub} from 'react-icons/fa'
+import {IoLogoCss3} from 'react-icons/io'
+import {IoLogoJavascript} from 'react-icons/io5'
+
+
 
 import { Languages, Skills } from './skillStyle'; 
 
@@ -12,33 +20,27 @@ const Skill = () => {
         <div>
           <article>
             <h4>HTML5</h4>
-            <small>Avançado</small>
-            <img src="./src/images/html-5.png" alt="HTML5" />
+            <AiFillHtml5 className="icon"/>
           </article>
           <article>
             <h4>CSS3</h4>
-            <small>Avançado</small>
-            <img src="./src/images/css-3.png" alt="CSS3" />
+            <IoLogoCss3 className="icon"/>
           </article>
           <article>
             <h4>Javascript</h4>
-            <small>Intermediário</small>
-            <img src="./src/images/js.png" alt="Javascript" />
+            <IoLogoJavascript className="icon" />
           </article>
           <article>
             <h4>React</h4>
-            <small>Básico</small>
-            <img src="./src/images/physics.png" alt="ReactJS" />
+            <FaReact className="icon" />
           </article>
           <article>
             <h4>Bootstrap</h4>
-            <small> Intermediário</small>
-            <img src="./src/images/bootstrap.png" alt="Bootstrap" />
+            <FaBootstrap className="icon" />
           </article>
             <article>
               <h4>Sass</h4>
-              <small>Básico</small>
-              <img src="./src/images/sass.png" alt="Sass" /> 
+              <FaSass className="icon"/> 
             </article>
           </div>
         </Skills>
@@ -47,18 +49,19 @@ const Skill = () => {
           <div>
             <article>
               <h4>MySQL</h4>
-              <small>Intermediário</small>       
-              <img src="./src/images/mysql.png" alt="MySQL" />
+              <GrMysql className="icon" />
+            </article>
+            <article>
+              <h4>C#</h4>           
+              <SiCsharp className="icon"/>
             </article>
             <article>
               <h4>PHP</h4>
-              <small>Básico</small>
-              <img src="./src/images/php.png" alt="PHP" />
+              <SiPhp className="icon"/>
             </article>
             <article>
-              <h4>Node</h4>
-              <small>Básico</small>
-              <img src="./src/images/node-js.png" alt="NodeJS" />
+              <h4>Node</h4>            
+              <FaNodeJs className="icon"/>
             </article>
           </div>
         </Skills>    
@@ -66,24 +69,20 @@ const Skill = () => {
             <h2>Outros</h2>
             <div>
             <article>
-              <h4>Azure DevOps</h4>
-              <small>Básico</small>
-              <img src="./src/images/azure.png" alt="Azure DevOps" />
+              <h4>Azure DevOps</h4>            
+              <SiAzuredevops className="icon"/>
             </article>
             <article>
-              <h4>Git</h4>
-              <small>Intermediário</small>        
-              <img src="./src/images/git.png" alt="Git" />
+              <h4>Git</h4>                    
+              <FaGitAlt className="icon" />
             </article>
             <article>
-              <h4>Github</h4>
-              <small>Intermediário</small>
-              <img src="./src/images/github.png" alt="Github" />
+              <h4>Github</h4>         
+              <FaGithub className="icon"/>
             </article>
             <article>
-              <h4>Photoshop</h4>
-              <small>Intermediário</small>
-              <img src="./src/images/Photoshop.png" alt="Photoshop" />
+              <h4>Photoshop</h4>            
+              <SiAdobephotoshop className="icon" />
             </article>
             </div>
           </Skills>

@@ -24,7 +24,7 @@ export const ContactContainer = styled.div`
     padding: 20px;
     height: 75vh;
     margin: 2vh 0 3vh 0;
-    color: #000;
+    color: #fff;
     @media (max-width: 800px){
       width: 80vw;
     }
@@ -42,17 +42,7 @@ export const ContactContainer = styled.div`
       font-size: 18px;
       margin: 1rem 0 1rem 0;
     }
-  }
-  span{
-        overflow-y: hidden;
-        color: #ffff;
-        border-bottom: 1px solid #ff0054;
-        background: transparent;
-        font-size: 16px;
-        margin: 5px;
-        font-weight: normal;
-      }
-        
+  }      
         textarea {
           font-size: 14px;
           outline: none;
@@ -64,14 +54,14 @@ export const ContactContainer = styled.div`
           width: 100%;      
           padding: 5px;    
           &::placeholder{
-            color: #fff;
+            color: #444;
             font-style: italic;
           }
         }  
         input{
           
           background-color: rgba(255, 255, 255, 0.2);
-          color: #000;
+          color: #fff;
           align-items: center;
           text-align: center;
           font-size: 16px;
@@ -80,7 +70,7 @@ export const ContactContainer = styled.div`
           outline: none;
           width: 100%;
           &::placeholder{
-            color: #fff;
+            color: #444;
             font-style: italic;
           }
             }         
@@ -98,6 +88,7 @@ export const Footer = styled.footer`
             align-items: center;
             a{
               margin-top: 1rem;
+              color: #023e8a;
               text-decoration: none;
             }
            

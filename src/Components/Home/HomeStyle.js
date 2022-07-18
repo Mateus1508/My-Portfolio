@@ -57,8 +57,9 @@ div{
     }
     h3{
       opacity: 0;
+      color: #023e8a;
       text-align: center;
-      font-size: 1.3em; 
+      font-size: 1.5em; 
       animation: show 1ms 0.5s forwards; 
     }
   }
@@ -86,19 +87,23 @@ div{
       animation: buttonComing 2s ease-out 1 normal; 
       background-color: #fff;
       box-shadow: 0 0 5px rgba(0,0,0,0.2);
-      width: 10rem;
       display: flex;
-      justify-content: center;
       border-radius: 5px;
       transition: 0.3s;
+      align-self: start;
       &:hover{
         background-color: #48cae4;
         box-shadow: 0 0 15px #90e0ef;
       }
-      img{
+      .icon{
         height: 3rem;
-        width: 3rem; 
-        }
+        width: 4rem; 
+        padding: 0.5rem;
+        color: #023e8a;
+        &:hover{
+          color: #fff;
+        }  
+      }
     }
     .linkedin{
       grid-area: btn1;

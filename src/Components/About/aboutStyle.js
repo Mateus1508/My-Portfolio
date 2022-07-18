@@ -15,11 +15,13 @@ export const Description = styled.div`
     margin: 2.5rem 0 1rem 0;
     font-size: 4rem;
     grid-column: 1/3;
+    color: #fff;
     @media (max-width: 600px) {
       font-size: 3em;
     }
   } 
   p{
+    color: #fff;
     font-size: 16px;
     justify-self: center;
     margin: 0 1rem 0 3rem ;
@@ -34,6 +36,7 @@ export const Description = styled.div`
     }
   }
   section{
+    color: #fff;
     display: flex;
     flex-direction: column;
     @media (max-width: 600px) {
@@ -60,12 +63,15 @@ export const Description = styled.div`
       .icon{
         margin: 1rem;
         font-size: 48px;
-        animation: turn 1.5s linear infinite normal;
+        animation: turn 1s linear infinite normal;
+        color: #000;
         :nth-child(2){
           animation: kick 1s ease-in infinite alternate;
+          color: #CD3813;
         }
         :nth-child(3){
           animation: pulse .5s ease-out infinite normal;
+          color: #662C91;
         }
       }
     }
@@ -73,12 +79,12 @@ export const Description = styled.div`
   }
   @keyframes turn {
     to{
-      transform: rotateZ(1turn);
+      transform: rotateZ(1turn) ;
     }
   }
   @keyframes kick {
-    from{ transform: translateY(-5px) }
-    to{ transform: translateY(5px) }
+    from{ transform: translateY(-5px) rotateZ(-0.2turn) }
+    to{ transform: translateY(5px) rotateZ(0turn) }
   }
   @keyframes pulse {
     from{ transform: scale(0.9) }

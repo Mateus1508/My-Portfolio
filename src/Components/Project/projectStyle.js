@@ -13,6 +13,7 @@ h1{
     margin: 2.5rem 0 1rem 0;
     font-size: 4rem;
     grid-column: 1/4;
+    color: #fff;
 }
 div{
     grid-column: 1/4;
@@ -46,6 +47,7 @@ export const Item = styled.article`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
+    color: #fff;
     &:hover{
         transform: scale(1.1); 
     }
