@@ -52,6 +52,7 @@ const Contact = () => {
             <input type="text" 
             placeholder="Seu nome"
             name="name" 
+            minlength="3"
             maxlength="30"
             required
             />
@@ -60,6 +61,7 @@ const Contact = () => {
             <input type="email" 
             name="email" 
             placeholder="example@example.com"
+            minlength="11"
             maxlength="45"
             onChange={handleChanges} 
             value={formValues.email}
@@ -72,7 +74,7 @@ const Contact = () => {
             placeholder="Gostaria de te contatar para..."
             onChange={handleChanges}
             rows="3"
-            maxlength="700" 
+            maxlength="500" 
             wrap="hard" 
             value={formValues.message}
             required

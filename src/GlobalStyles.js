@@ -30,8 +30,12 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     overflow-x: hidden;
   }
+  h1{
+    padding: 0 5px;
+  }
   h1,h2,h3,h4,small{
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); 
+    text-shadow: 5px 2px 5px rgba(0, 0, 0, 0.2); 
+    text-rendering: optimizeLegibility !important;
   }
   *, input, button {
     font-family: 'Roboto', sans-serif;

@@ -60,6 +60,13 @@ export const Item = styled.article`
         grid-column: 1/3;
         grid-row: 1;
     }
+    small{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    h4{
+        color: #bbbb;
+    }
 `
 
 export const Filter = styled.div`

@@ -31,6 +31,10 @@ const Project = () => {
     const codeSandbox = filter.filter((repos) => repos.name.includes("codesandbox"));
     setRepos(codeSandbox);
   };
+  const filterFullstack = () => {
+    const fullstack = filter.filter((repos) => repos.name.includes("fullstack"));
+    setRepos(fullstack);
+  };
 
   return (
     <Projects id="Project">
@@ -40,6 +44,7 @@ const Project = () => {
         <ButtonLarge onClick={filterFront}>Frontend</ButtonLarge>
         <ButtonLarge onClick={filterCodeSandbox}>CodeSandbox</ButtonLarge>
         <ButtonLarge onClick={filterBack}>Backend</ButtonLarge>
+        <ButtonLarge onClick={filterFullstack}>Fullstack</ButtonLarge>
         <ButtonLarge onClick={Todos}>Todos</ButtonLarge>
       </Filter>
 
