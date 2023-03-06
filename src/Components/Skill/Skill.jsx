@@ -56,10 +56,6 @@ const Skill = () => {
               <SiCsharp className="icon"/>
             </article>
             <article>
-              <h4>PHP</h4>
-              <SiPhp className="icon"/>
-            </article>
-            <article>
               <h4>Node</h4>            
               <FaNodeJs className="icon"/>
             </article>
