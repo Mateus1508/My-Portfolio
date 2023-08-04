@@ -41,7 +41,7 @@ export const Item = styled.article`
     margin: 2rem;
     width: 15rem;
     min-height: 16rem;
-    max-height: 20rem;
+    max-height: max-content;
     background: #023e8a;
     text-align: center;
     transition: .3s linear;
@@ -56,7 +56,7 @@ export const Item = styled.article`
     h2{
         grid-row: 2;
         grid-column: 1/3;
-        margin: 0 1rem 0 1rem;
+        margin: 1rem;
     }
     span{
         grid-column: 1/3;
