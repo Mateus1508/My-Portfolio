@@ -40,7 +40,8 @@ export const Item = styled.article`
     box-shadow: 0 0 15px #90e0ef; 
     margin: 2rem;
     width: 15rem;
-    height: 16rem;
+    min-height: 16rem;
+    max-height: 20rem;
     background: #023e8a;
     text-align: center;
     transition: .3s linear;
