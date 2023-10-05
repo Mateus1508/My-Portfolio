@@ -51,16 +51,22 @@ div{
       opacity: 0;
       animation: show 1ms 0.5s forwards; 
       flex-basis: 100%;
-      @media (max-width:540px){
+      @media (max-width:630px){
         font-size: 3em;
+      }
+      @media (max-width:425px){
+        font-size: 2em;
       }
     }
     h3{
       opacity: 0;
       color: #023e8a;
       text-align: center;
-      font-size: 1.5em; 
+      font-size: 2em; 
       animation: show 1ms 0.5s forwards; 
+      @media (max-width: 425px){
+        font-size: 1.5em;
+      }
     }
   }
    .perfil{
@@ -78,7 +84,7 @@ div{
       grid-row: 1;
       justify-self: center;
     }
-    @media (width: 375px){
+    @media (max-width: 425px){
       height: 150px;
       width: 150px;
     }

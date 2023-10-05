@@ -6,12 +6,12 @@ export const Languages = styled.section`
   height: max-content;
   width: 100vw;
   h1{
+    margin: 50px 0;
     grid-area: title;
     font-size: 64px;
     text-align: center;
     align-self: center;
     color: #fff;
-    height: 15vh;
     @media (max-width:1200px){
       height: 10vh;
       font-size: 48px;
@@ -74,7 +74,7 @@ export const Skills = styled.div`
       grid-template-rows: 1fr 1fr 0.5fr;
       gap: 1rem;
       place-items: center;
-      margin: 0.5rem;
+      margin: 1rem;
       background: transparent;
       max-height: max-content;
       justify-items: center;     
