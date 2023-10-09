@@ -1,8 +1,8 @@
 import Repositories from "./Repositories";
-import {Projects, Filter} from "./projectStyle"
+import { Projects, Filter } from "./projectStyle"
 import ApiGithub from "/src/Services/ApiGithub";
 import { useEffect, useState } from "react";
-import {ButtonLarge} from "../Button/buttonStyle";
+import { ButtonLarge } from "../Button/buttonStyle";
 
 const Project = () => {
   const [repos, setRepos] = useState([]);
@@ -39,7 +39,7 @@ const Project = () => {
   return (
     <Projects id="Project">
       <h1 data-aos="flip-left">Projetos</h1>
-    
+
       <Filter data-aos="fade-left">
         <ButtonLarge onClick={filterFront}>Frontend</ButtonLarge>
         <ButtonLarge onClick={filterCodeSandbox}>CodeSandbox</ButtonLarge>
@@ -51,14 +51,14 @@ const Project = () => {
       <section data-aos="zoom-in">
         {repos?.map((repos) => (
           <Repositories
-          key={repos.id}
-          id={repos.id}
-          name={repos.description}
-          demo={repos.homepage}
-          github={repos.html_url}
-          language={repos.language}
+            key={repos.id}
+            id={repos.id}
+            name={repos.description}
+            demo={repos.homepage}
+            github={repos.html_url}
+            language={repos.language}
           />
-          ))}
+        ))}
       </section>
     </Projects>
   );

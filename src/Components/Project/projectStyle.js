@@ -37,36 +37,40 @@ section{
 }
 `
 export const Item = styled.article`
-    box-shadow: 0 0 15px #90e0ef; 
-    margin: 2rem;
-    width: 15rem;
-    height: max-content;
-    background: #023e8a;
-    text-align: center;
-    transition: .3s linear;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    align-items: center;
-    color: #fff;
-    &:hover{
-        transform: scale(1.1); 
+    box-shadow: 0 0 5px #90e0ef;
+    color: #fff; 
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 5px;
+    width: 300px;
+    height: 150px;
+    h2 {
+        font-size: 16px;
+        text-align: justify;
     }
-    h2{
-        grid-row: 2;
-        grid-column: 1/3;
-        margin: 1rem;
+    span {
+        border: 1px solid #fff;
+        padding: 5px;
+        width: 100px;
+        border-radius: 5px;
     }
-    span{
-        grid-column: 1/3;
-        grid-row: 1;
-    }
-    small{
+    div {
+        margin: 0;
         display: flex;
-        flex-wrap: wrap;
-    }
-    h4{
-        color: #bbbb;
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+        a, small {
+            text-decoration: none;
+            color: #fff;
+            flex: 1;
+        }
     }
 `
 
