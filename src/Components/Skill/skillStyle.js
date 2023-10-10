@@ -29,10 +29,10 @@ section {
 }
 `
 export const Skills = styled.div`
-    display: grid;
+    display: flex;
+    flex-direction: column;
     margin: 1rem;
-    grid-template-columns: repeat(auto-fit, 1fr);
-    grid-template-rows: repeat(auto-fit, 1fr);
+    max-width: 450px;
     border: 1rem;
     align-items: flex-start;
     background: #023e8a;
@@ -51,7 +51,6 @@ export const Skills = styled.div`
      width: 90vw;
     }
     h2{
-    
       text-align: center;
       align-self: center;
       color: #fff;
@@ -69,12 +68,11 @@ export const Skills = styled.div`
       }
     }
     div{
-      display: grid;
-      
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 1fr 1fr 0.5fr;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
       gap: 1rem;
-      place-items: center;
       margin: 1rem;
       background: transparent;
       max-height: max-content;
