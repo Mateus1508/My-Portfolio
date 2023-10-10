@@ -36,6 +36,7 @@ export const Skills = styled.div`
     border: 1rem;
     align-items: flex-start;
     background: #023e8a;
+    border-radius: 10px;
     box-shadow: 0 0 10px #90e0ef; 
     @media (max-width: 1200px) {
      width: 50vw;
@@ -91,6 +92,7 @@ export const Skills = styled.div`
     
           article{
             display: grid;
+            border-radius: 10px;
             grid-template-columns: 1fr;
             grid-template-areas: "h4"
             "img"
@@ -104,7 +106,7 @@ export const Skills = styled.div`
             -webkit-backdrop-filter: blur(2px);
             border: 1px solid rgba(255, 255, 255, 0.8);
             background: rgba(255, 255, 255, 0.4);
-            box-shadow: 0 0 10px #90e0ef; 
+            box-shadow: 0 0 5px #90e0ef; 
             transition: 0.5s;
         }
           h4{
@@ -128,7 +130,7 @@ export const Skills = styled.div`
               background: transparent;
               transition: 0.5s;
               &:hover{
-                transform: scale(1.2) rotateZ(1turn);
+                transform: scale(1.2);
                 color: #90e0ef;
               }
               }

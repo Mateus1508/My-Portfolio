@@ -9,7 +9,7 @@ const Repositories = ({ id, filter, name, demo, github, language }) => {
   return (
     <Item id={id} name={filter}>
       <div>
-        <span>{language}</span>
+        {language != null ? <span>{language}</span> : null}
         <a href={github} target="_blank" rel="noopener noreferrer">
           <ButtonSmall>Código</ButtonSmall>
         </a>
