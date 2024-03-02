@@ -1,0 +1,26 @@
+[
+    {
+        "company": "Renova Soluções em tecnologia",
+        "position": "Desenvolvedor Estagiário",
+        "time": "11/2021 - 11/2022 (1 ano)",
+        "description": "Engajado na criação dos documentos ISO 27001, adquiri habilidades em sprints e gestão de prazos. Com experiência no setor comercial, compreendi o atendimento ao cliente e suas dinâmicas, reforçado por uma visita prática a um cliente. Minha passagem como Tester ampliou minha visão de usuário, enquanto o desenvolvimento no sistema legado aprimorou competências em Javascript, Bootstrap, JQuery, Ajax, C# e SQL Server. Contribuí ativamente para uma significativa redução de 85% nos chamados semanais, fruto das melhorias implementadas no sistema."
+    },
+    {
+        "company": "Renova Soluções em tecnologia",
+        "position": "Desenvolvedor Frontend",
+        "time": "11/2022 - 04/2023 (6 meses)",
+        "description": "Atuei com desenvolvimento Frontend, conduzi projetos web com React, styled components, axios e autenticação JWT. Também atuei no desenvolvimento de um sistema desktop em WPF, aplicando material design, para coleta de biometria, além de contribuir para sistemas web de monitoramento de câmeras e validação facial."
+    },
+    {
+        "company": "Autônomo",
+        "position": "Desenvolvedor Freelancer",
+        "time": "04/2023 - atualmente",
+        "description": "Desenvolvo soluções web e mobile usando as tecnologias React, Flutter, Node e React Native."
+    },
+    {
+        "company": "SGN Sistemas",
+        "position": "Desenvolvedor Full Stack",
+        "time": "12/2023 - 02/2024 (3 meses)",
+        "description": "Desenvolvimento de backend para geração de boletos, utilizando Node e Typescript. Frontend de módulo do novo ERP da empresa implementado com React, Typescript."
+    }
+]

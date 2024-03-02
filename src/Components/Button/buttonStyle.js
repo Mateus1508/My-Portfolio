@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled from "styled-components/";
 
 export const ButtonLarge = styled.button`
   width: 8rem;
@@ -10,13 +10,12 @@ export const ButtonLarge = styled.button`
   cursor: pointer;
   color: #023e8a;
   font-size: 1rem;
-  &:hover{
-    color: #fff;
+  &:hover, &::selection{
+      color: #eee;
       background-color: #48cae4;
       box-shadow: 0 0 15px #90e0ef;
-
   }
-`
+`;
 export const ButtonMedium = styled.button`
   width: 5rem;
   height: 3rem;
@@ -27,12 +26,12 @@ export const ButtonMedium = styled.button`
   background-color: #ffff;
   transition: .3s ease-out;
   cursor: pointer;
-  &:hover{
+  &:hover, &::selection{
     color: #fff;
       background-color: #48cae4;
       box-shadow: 0 0 15px #90e0ef;
   }
-`
+`;
 
 export const ButtonSmall = styled.button`
   width: 4rem;
@@ -48,4 +47,4 @@ export const ButtonSmall = styled.button`
       background-color: #48cae4;
       box-shadow: 0 0 15px #90e0ef;
   }
-`
+`;

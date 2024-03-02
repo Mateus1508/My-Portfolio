@@ -1,4 +1,4 @@
-import styled from "styled-components/macro";
+import styled from "styled-components/";
 
 export const Languages = styled.section`
   display: flex;
@@ -6,17 +6,7 @@ export const Languages = styled.section`
   height: max-content;
   width: 100vw;
   h1{
-    margin: 50px 0;
-    grid-area: title;
-    font-size: 64px;
-    text-align: center;
-    align-self: center;
-    color: #fff;
-    @media (max-width:1200px){
-      height: 10vh;
-      font-size: 48px;
-
-    }
+    grid-area: title; 
   }
 
 section {
@@ -27,7 +17,7 @@ section {
     place-items: center;
   }
 }
-`
+`;
 export const Skills = styled.div`
     display: flex;
     flex-direction: column;
@@ -35,7 +25,7 @@ export const Skills = styled.div`
     max-width: 450px;
     border: 1rem;
     align-items: flex-start;
-    background: #023e8a;
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     box-shadow: 0 0 10px #90e0ef; 
     @media (max-width: 1200px) {
@@ -103,7 +93,7 @@ export const Skills = styled.div`
             backdrop-filter: blur(2px);
             -webkit-backdrop-filter: blur(2px);
             border: 1px solid rgba(255, 255, 255, 0.8);
-            background: rgba(255, 255, 255, 0.4);
+            background: rgb(2, 62, 138, 0.5);
             box-shadow: 0 0 5px #90e0ef; 
             transition: 0.5s;
         }
@@ -129,7 +119,6 @@ export const Skills = styled.div`
               transition: 0.5s;
               &:hover{
                 transform: scale(1.2);
-                color: #90e0ef;
               }
               }
             small{
@@ -139,4 +128,4 @@ export const Skills = styled.div`
               text-align: center; 
               background: transparent;        
             }
-      `
+      `;

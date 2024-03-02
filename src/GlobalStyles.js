@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components/macro'
+import { createGlobalStyle } from "styled-components/";
 
 export const GlobalStyles = createGlobalStyle`
   html{
@@ -31,7 +31,15 @@ export const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
   }
   h1{
-    padding: 0 5px;
+    text-align: center;
+    color: #FFF;
+    font-size: 4.5em;
+    margin: 3rem;
+    opacity: 0;
+    animation: show 1ms 0.5s forwards; 
+    @media (max-width:630px){
+      font-size: 3em;
+    }
   }
   h1,h2,h3,h4,small{
     text-shadow: 5px 2px 5px rgba(0, 0, 0, 0.2); 
@@ -57,4 +65,4 @@ export const GlobalStyles = createGlobalStyle`
   
 
 
-`
+`;

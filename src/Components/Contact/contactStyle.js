@@ -1,18 +1,16 @@
-import styled from "styled-components/macro";
+import styled from "styled-components/";
 
 export const ContactContainer = styled.div`
-  display: grid;
-  grid-template-columns: "1fr";
-  grid-template-rows: "1fr 1fr";
-  grid-template-areas: "content"
-  "footer";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100vh;
   justify-items: center;
   width: 100vw;
-  
+  padding: 10px 0;
   form{
-    grid-area: content;
-    background: rgba(255, 255, 255, 0.16);
+    border-radius: 10px;
+    background: rgb(2, 62, 138, 0.5);
     box-shadow: 0 0 15px #90e0ef;
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
@@ -33,7 +31,6 @@ export const ContactContainer = styled.div`
       justify-items: center;
       text-align: center;
       overflow-y: hidden;
-      grid-row: 1;
       border-bottom: 1px solid #fff;
       margin-bottom: 2rem;
     }
@@ -74,11 +71,10 @@ export const ContactContainer = styled.div`
             font-style: italic;
           }
             }         
-            `
+            `;
 
 export const Footer = styled.footer`
          
-            grid-area: footer;
             width: 100%;
             height: 20vh;
             display: flex;
@@ -92,4 +88,4 @@ export const Footer = styled.footer`
               text-decoration: none;
             }
            
-`
+`;
