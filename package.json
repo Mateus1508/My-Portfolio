@@ -10,7 +10,7 @@
     "lint:fix": "eslint --fix src"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.6.2",
+    "@emailjs/browser": "^4.2.0",
     "aos": "^2.3.4",
     "axios": "^0.27.2",
     "react": "^18.0.0",

@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useState} from "react";
+import React, {useState,useRef} from "react";
 import emailjs from "@emailjs/browser";
 
 import { ButtonLarge } from "../Button/buttonStyle";
@@ -6,41 +6,35 @@ import { ButtonLarge } from "../Button/buttonStyle";
 import { ContactContainer, Footer } from "./contactStyle";
 
 const Contact = () => {
-
+	const [formValues, setFormValues] = useState({
+		name: "",
+		email: "",
+		subject: "",
+		message: "",
+	});
+	const handleInputChange = (e) => {
+		const { name, value } = e.target;
+		setFormValues({
+			...formValues,
+			[name]: value,
+		});
+	};
+	emailjs.init({
+		publicKey: import.meta.env.VITE_PUBLIC_KEY,
+	});
 	const form = useRef();
 
-	const handleSubmit = () => {
-		setFormErrors(formValues);
-		setIsSubmit(true);
-	};
 	const sendEmail = (e) => {
-		e.preventDefault();
-		emailjs.sendForm(import.meta.env.VITE_GMAIL_MESSAGE, import.meta.env.VITE_TEMPLATE, form.current, import.meta.env.VITE_USER_ID)
+		emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, form.current)
 			.then(() => {
 				alert("Sua mensagem foi enviada com sucesso!");
 			}, (error) => {
-				alert(error.message);
+				console.log(error);
+				alert(error.text);
 			});
+		e.preventDefault();
 		e.target.reset();
-	};
-    
-	const initialValues = { email: "", message: "" };
-	const [formValues, setFormValues] = useState(initialValues);
-	const [formErrors, setFormErrors] = useState({});
-	const [isSubmit, setIsSubmit] = useState(false);
-    
-	const handleChanges = (e) => {
-		const { name, value } = e.target;
-		setFormValues({ ...formValues, [name]: value });
-	};
-  
-  
-	useEffect(() => {
-		console.log(formErrors);
-		if (Object.keys(formErrors).length === 0 && isSubmit) {
-			console.log(formValues);
-		}
-	}, [formErrors]);
+	};    
 
 	return (
 		<ContactContainer id="Contact" data-aos="fade-right">
@@ -51,19 +45,31 @@ const Contact = () => {
 				<input type="text" 
 					placeholder="Seu nome"
 					name="name" 
+					value={formValues.name}
+					onChange={handleInputChange}
 					minLength="3"
 					maxLength="30"
 					required
+				/>
+
+				<label htmlFor="subject">Assunto</label>
+				<input type="text" 
+					placeholder="Convite para processo seletivo"
+					name="subject" 
+					value={formValues.subject}
+					onChange={handleInputChange}
+					minLength="3"
+					maxLength="30"
 				/>
           
 				<label htmlFor="email">Email</label>
 				<input type="email" 
 					name="email" 
+					value={formValues.email}
+					onChange={handleInputChange}
 					placeholder="example@example.com"
 					minLength="11"
 					maxLength="45"
-					onChange={handleChanges} 
-					value={formValues.email}
 					required
 				/>
          
@@ -71,15 +77,15 @@ const Contact = () => {
 				<textarea 
 					name="message"
 					placeholder="Gostaria de te contatar para..."
-					onChange={handleChanges}
 					rows="3"
+					value={formValues.message}
+					onChange={handleInputChange}
 					maxLength="500" 
 					wrap="hard" 
-					value={formValues.message}
 					required
 				/>
          
-				<ButtonLarge type="submit" onClick={handleSubmit}>Enviar</ButtonLarge>
+				<ButtonLarge type="submit">Enviar</ButtonLarge>
 			</form>
 			<Footer>
 				<a href="https://github.com/Mateus1508" target="_blank" rel="noopener noreferrer">Developed by Mateus1508</a>
