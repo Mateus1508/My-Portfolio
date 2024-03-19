@@ -4,7 +4,8 @@ export const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: max-content;
   justify-items: center;
   width: 100vw;
   padding: 10px 0;
@@ -20,8 +21,8 @@ export const ContactContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding: 20px;
-    height: 75vh;
-    margin: 2vh 0 3vh 0;
+    height: 90vh;
+    margin: 3rem 0;
     color: #fff;
     @media (max-width: 800px){
       width: 80vw;
@@ -36,8 +37,8 @@ export const ContactContainer = styled.div`
     }
     label{
       overflow-y: hidden;
-      font-size: 18px;
-      margin: 1rem 0 1rem 0;
+      font-size: 16px;
+      margin: 1rem 0;
     }
   }      
         textarea {

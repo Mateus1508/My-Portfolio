@@ -54,7 +54,7 @@ const Contact = () => {
 
 				<label htmlFor="subject">Assunto</label>
 				<input type="text" 
-					placeholder="Convite para processo seletivo"
+					placeholder="Convite para ..."
 					name="subject" 
 					value={formValues.subject}
 					onChange={handleInputChange}
