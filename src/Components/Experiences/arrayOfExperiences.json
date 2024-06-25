@@ -2,13 +2,13 @@
     {
         "company": "Renova Soluções em tecnologia",
         "position": "Desenvolvedor Estagiário",
-        "time": "11/2021 - 11/2022 (1 ano)",
+        "time": "11/2021 - 11/2022",
         "description": "Durante minha participação na elaboração dos documentos ISO 27001, desenvolvi habilidades em sprints e gestão de prazos, essenciais para conduzir os processos de forma eficiente. Minha experiência no setor comercial, incluindo uma visita prática a um cliente, fortaleceu minha compreensão das necessidades dos clientes. Como Tester, ampliei minha visão de usuário, enquanto o desenvolvimento no sistema legado me permitiu aprimorar habilidades em Javascript, Bootstrap, JQuery, Ajax, C# e SQL Server. Destaco minha contribuição para uma redução significativa de 85% nos chamados semanais, resultado das melhorias implementadas no sistema, demonstrando meu compromisso com a excelência e o valor agregado aos projetos."
     },
     {
         "company": "Renova Soluções em tecnologia",
         "position": "Desenvolvedor Frontend",
-        "time": "11/2022 - 04/2023 (6 meses)",
+        "time": "11/2022 - 04/2023",
         "description": "Durante minha trajetória como desenvolvedor Frontend, liderei projetos web que empregavam tecnologias como React, styled components e axios, com especial atenção à segurança por meio da autenticação JWT. Além disso, assumi um papel central no desenvolvimento de um sistema desktop em WPF, aplicando os princípios do material design para aprimorar a experiência do usuário na coleta de biometria. Paralelamente, contribuí ativamente para o desenvolvimento de sistemas web dedicados ao monitoramento de câmeras e validação facial. Essa diversidade de projetos ampliou minha expertise em várias frentes do desenvolvimento de software, proporcionando uma visão abrangente e a capacidade de enfrentar desafios complexos com confiança e criatividade."
     },
     {
@@ -20,7 +20,13 @@
     {
         "company": "SGN Sistemas",
         "position": "Desenvolvedor Full Stack",
-        "time": "12/2023 - 02/2024 (3 meses)",
+        "time": "12/2023 - 02/2024",
         "description": "Desenvolvi o backend para geração de boletos utilizando Node.js e Typescript, garantindo eficiência e segurança no processo. Além disso, liderei o desenvolvimento do frontend de um módulo do novo ERP da empresa, utilizando React e Typescript, proporcionando uma experiência de usuário moderna e intuitiva."
+    },
+    {
+        "company": "Sigma gestão e consultoria",
+        "position": "Desenvolvedor Full Stack",
+        "time": "04/2024 - 06/2024",
+        "description": "Trabalhei ativamente no desenvolvimento de um novo sistema de gerenciamento. Responsável por gerir todas as tarefas e projetos das empresas do grupo. Atuei como full stack nessa posição usando as tecnologias PHP, JS, CSS, HTML e banco de dados Oracle."
     }
 ]
