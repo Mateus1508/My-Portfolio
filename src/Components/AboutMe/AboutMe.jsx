@@ -9,8 +9,7 @@ const AboutMe = () => {
 				<img src="https://github.com/Mateus1508.png" alt="Mateus, Foto de perfil" />  
 				<section>
 					<h2>Quem sou</h2>
-					<p>Sou um desenvolvedor frontend com ampla experiência em tecnologias como React, TypeScript, Node e C#, e uma afinidade especial por frameworks de estilo como Tailwind. Com mais de dois anos de atuação no desenvolvimento de sistemas, adquiri uma sólida experiência em trabalhar com bancos de dados SQL e NoSQL, comprovada por meus certificados e projetos.</p>
-					<p>Meu compromisso é entregar soluções de alta qualidade de forma eficiente, sempre mantendo um padrão de excelência. Além disso, sou um colaborador ativo em equipes, sempre disposto a aprender e contribuir. Compartilhar conhecimentos e experiências com meus colegas é uma parte fundamental do meu trabalho.</p>
+					<p>Sou um profissional apaixonado por desenvolvimento, especializado em JavaScript e ASP.NET C#. Com mais de dois anos de experiência, exerci liderança em projetos desafiadores, como sistemas de monitoramento e validação facial. Tenho a capacidade de resolver problemas complexos, otimizar processos e garantir a excelência em cada entrega. Estou sempre em busca das melhores práticas para melhorar a eficiência e a qualidade do desenvolvimento. </p>
 				</section>
 			</div>
 		</Container>
