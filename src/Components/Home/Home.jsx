@@ -13,7 +13,7 @@ const Home = () => {
 				<div className="text-reveal">
 					<h1>Mateus Belmonte</h1>
 				</div>
-				<h3>Desenvolvedor Frontend</h3>
+				<h3>Desenvolvedor de Software</h3>
 				<Links>		
 					<a className="github" href="https://github.com/Mateus1508" target="_blank" rel="noopener noreferrer">
 						<FiGithub className="icon"/>
